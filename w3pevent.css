@@ -4408,3 +4408,15 @@ footer.mobile-footer {
     font-size: 0.875rem;
   }
 }
+
+/* CUSTOM UPDATES BY DANI */
+
+/* Hero venue line under tagline */
+.hero-venue {
+  font-family: "DM Sans", system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  opacity: 0.9;
+  letter-spacing: 0.05em;
+}

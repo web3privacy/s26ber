@@ -423,10 +423,23 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
-/* Mobile browsers don't support fixed bg properly — causes extreme zoom */
+/* Mobile browsers don't support fixed bg — use a fixed pseudo-element instead */
 @media (max-width: 767px) {
   body {
-    background-attachment: scroll;
+    background-image: none;
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/img/desktop.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
   }
 }
 * {

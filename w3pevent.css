@@ -2128,7 +2128,7 @@ table.table-custom {
     padding: 3rem 1rem;
     padding-top: calc(80px + 3rem);
     padding-bottom: 3rem;
-    min-height: 100vh;
+    min-height: auto;
     height: auto;
   }
 
@@ -2427,10 +2427,11 @@ table.table-custom {
 
 .mobile-menu-close {
   position: absolute;
-  top: 1.25rem;
-  right: 1.5rem;
+  top: 1.5rem;
+  right: 2.4rem;
   color: white;
   cursor: pointer;
+  padding: 8px;
   z-index: 10001;
 }
 

@@ -2416,7 +2416,7 @@ table.table-custom {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.97);
-  z-index: 40;
+  z-index: 10000;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2467,7 +2467,11 @@ table.table-custom {
 }
 
 #mobile-menu-toggle:checked ~ .navbar-minimal .mobile-menu-panel {
-  display: block !important;
+  display: flex !important;
+}
+
+#mobile-menu-toggle:checked ~ .navbar-minimal .mobile-nav {
+  z-index: 10001;
 }
 
 /* Mobile responsiveness */

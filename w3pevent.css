@@ -3745,16 +3745,16 @@ html #faq,
   }
 
   .team-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    max-width: 300px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem 1rem;
+    max-width: 400px;
     margin: 1.5rem auto;
     padding: 0 0.5rem;
   }
 
   .team-member .team-avatar {
-    width: 120px;
-    height: 120px;
+    width: 80px;
+    height: 80px;
   }
 
   .team-name {
@@ -3785,14 +3785,15 @@ html #faq,
   }
 
   .team-grid {
-    max-width: 280px;
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 340px;
+    gap: 1.5rem 0.75rem;
     margin: 1rem auto;
   }
 
   .team-member .team-avatar {
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
   }
 
   .team-name {

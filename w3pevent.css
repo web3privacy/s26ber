@@ -2124,12 +2124,21 @@ table.table-custom {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  #intro {
+    height: auto;
+  }
+
   .hero-container {
     padding: 3rem 1rem;
     padding-top: calc(80px + 3rem);
-    padding-bottom: 3rem;
+    padding-bottom: 1rem;
     min-height: auto;
     height: auto;
+  }
+
+  .about-container {
+    margin-top: 0;
+    padding-top: 0;
   }
 
   .about-badge {

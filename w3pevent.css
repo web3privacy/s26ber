@@ -423,6 +423,12 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+/* Mobile browsers don't support fixed bg properly — causes extreme zoom */
+@media (max-width: 767px) {
+  body {
+    background-attachment: scroll;
+  }
+}
 * {
   font-family: "DM Sans", sans-serif;
   font-weight: 300;

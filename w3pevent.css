@@ -2454,7 +2454,7 @@ table.table-custom {
 }
 
 /* Desktop: hide mobile elements */
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .mobile-nav,
   .mobile-menu-panel {
     display: none !important;

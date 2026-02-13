@@ -2129,8 +2129,8 @@ table.table-custom {
   }
 
   .hero-container {
-    padding: 3rem 1rem;
-    padding-top: calc(80px + 3rem);
+    padding: 1.5rem 1rem;
+    padding-top: calc(70px + 1.5rem);
     padding-bottom: 1rem;
     min-height: auto;
     height: auto;
@@ -2138,7 +2138,11 @@ table.table-custom {
 
   .about-container {
     margin-top: 0;
-    padding-top: 0;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+  }
+
+  .about-content {
+    gap: 1rem;
   }
 
   .about-badge {

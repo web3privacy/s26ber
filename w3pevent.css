@@ -2418,10 +2418,20 @@ table.table-custom {
   background: rgba(0, 0, 0, 0.97);
   z-index: 10000;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   opacity: 0;
   animation: menuFadeIn 0.25s ease forwards;
+}
+
+.mobile-menu-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.5rem;
+  color: white;
+  cursor: pointer;
+  z-index: 10001;
 }
 
 @keyframes menuFadeIn {
@@ -2466,7 +2476,7 @@ table.table-custom {
   display: block !important;
 }
 
-#mobile-menu-toggle:checked ~ .navbar-minimal .mobile-menu-panel {
+#mobile-menu-toggle:checked ~ .mobile-menu-panel {
   display: flex !important;
 }
 

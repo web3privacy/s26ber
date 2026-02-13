@@ -2124,17 +2124,13 @@ table.table-custom {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  /* Reorder: about (headline + CTA) before hero on mobile */
-  body > div:first-of-type {
-    display: flex;
-    flex-direction: column;
+  #intro {
+    height: auto;
   }
-  #header { order: 0; }
-  #about { order: 1; padding-top: 80px; }
-  #intro { order: 2; height: auto; }
 
   .hero-container {
-    padding: 1rem;
+    padding: 3rem 1rem;
+    padding-top: calc(80px + 3rem);
     padding-bottom: 1rem;
     min-height: auto;
     height: auto;
@@ -2142,11 +2138,7 @@ table.table-custom {
 
   .about-container {
     margin-top: 0;
-    padding: 0 1.5rem 1rem 1.5rem;
-  }
-
-  .about-content {
-    gap: 1rem;
+    padding-top: 0;
   }
 
   .about-badge {

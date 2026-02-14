@@ -80,37 +80,6 @@ body {
   src: url("/fonts/Inter-Medium.woff2") format("woff2");
 }
 
-/* === LEGACY FONT ALIASES (will be removed after migration) === */
-/* These map old class names to Inter so nothing breaks during migration */
-.dm-sans-light {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-}
-
-.aileron-semibold {
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
-}
-
-.aileron-regular {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-}
-
-.archivo-semibold {
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
-}
-
-.kyiv-serif-bold {
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
-}
-
-.archivo-font {
-  font-family: "Inter", sans-serif;
-}
-
 /* === TYPOGRAPHY UTILITY CLASSES === */
 /* Display — layout headings */
 .display-lg {
@@ -2042,15 +2011,15 @@ table.table-custom {
 
 /* Hero main title */
 .hero-title {
-  font-family: KyivTypeSerif, serif;
-  font-size: 2.8rem;
-  line-height: 1.05;
-  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: var(--display-sm-size);
+  line-height: var(--display-sm-lh);
+  letter-spacing: var(--display-sm-ls);
   text-transform: none;
   color: #ffffff;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   margin: 0;
-  letter-spacing: -0.02em;
   max-width: 100%;
 }
 
@@ -2068,11 +2037,11 @@ table.table-custom {
 
 @media (min-width: 768px) {
   .hero-title {
-    font-size: 3.5rem;
+    font-size: var(--display-md-size);
+    line-height: var(--display-md-lh);
   }
 
   .hero-tagline {
-    font-size: 1.2rem;
     margin-top: -0.5rem;
   }
 
@@ -2084,11 +2053,8 @@ table.table-custom {
 
 @media (min-width: 1024px) {
   .hero-title {
-    font-size: 4.2rem;
-  }
-
-  .hero-tagline {
-    font-size: 1.3rem;
+    font-size: var(--display-lg-size);
+    line-height: var(--display-lg-lh);
   }
 
   .hero-content {
@@ -2099,11 +2065,8 @@ table.table-custom {
 
 @media (min-width: 1200px) {
   .hero-title {
-    font-size: 4.8rem;
-  }
-
-  .hero-tagline {
-    font-size: 1.4rem;
+    font-size: var(--display-lg-size);
+    line-height: var(--display-lg-lh);
   }
 
   .hero-content {
@@ -2796,9 +2759,11 @@ table.table-custom {
 }
 
 .feature-title {
-  font-family: "Aileron", sans-serif;
-  font-size: 1.4rem;
-  font-weight: 600;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: var(--title-lg-size);
+  line-height: var(--title-lg-lh);
+  letter-spacing: 0;
   color: white;
   margin-bottom: 0.75rem;
   text-transform: none;

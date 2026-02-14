@@ -6,6 +6,52 @@
   --brand-navy: #1b2354;
   --brand-gray: #515679;
   --brand-white: #ffffff;
+
+  /* === TYPOGRAPHY DESIGN TOKENS === */
+  /* Display — layout headings */
+  --display-lg-size: 56px;
+  --display-lg-lh: 64px;
+  --display-lg-ls: -2.5%;
+  --display-md-size: 44px;
+  --display-md-lh: 52px;
+  --display-md-ls: -2.5%;
+  --display-sm-size: 36px;
+  --display-sm-lh: 44px;
+  --display-sm-ls: -2.5%;
+
+  /* Headline — high-emphasis headings to divide primary regions */
+  --headline-lg-size: 32px;
+  --headline-lg-lh: 40px;
+  --headline-md-size: 28px;
+  --headline-md-lh: 36px;
+  --headline-sm-size: 24px;
+  --headline-sm-lh: 32px;
+
+  /* Title — medium-emphasis headings to divide secondary regions */
+  --title-lg-size: 20px;
+  --title-lg-lh: 24px;
+  --title-md-size: 16px;
+  --title-md-lh: 24px;
+  --title-sm-size: 14px;
+  --title-sm-lh: 20px;
+
+  /* Body — paragraphs, body copy */
+  --body-lg-size: 16px;
+  --body-lg-lh: 24px;
+  --body-md-size: 14px;
+  --body-md-lh: 20px;
+  --body-sm-size: 12px;
+  --body-sm-lh: 16px;
+  --body-sm-ls: 2.5%;
+
+  /* Label — buttons, captions, supporting text */
+  --label-lg-size: 16px;
+  --label-lg-lh: 24px;
+  --label-md-size: 14px;
+  --label-md-lh: 20px;
+  --label-sm-size: 11px;
+  --label-sm-lh: 16px;
+  --label-sm-ls: 2.5%;
 }
 
 /* Global overflow fix */
@@ -63,6 +109,122 @@ body {
 
 .archivo-font {
   font-family: "Inter", sans-serif;
+}
+
+/* === TYPOGRAPHY UTILITY CLASSES === */
+/* Display — layout headings */
+.display-lg {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: var(--display-lg-size);
+  line-height: var(--display-lg-lh);
+  letter-spacing: var(--display-lg-ls);
+}
+.display-md {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: var(--display-md-size);
+  line-height: var(--display-md-lh);
+  letter-spacing: var(--display-md-ls);
+}
+.display-sm {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: var(--display-sm-size);
+  line-height: var(--display-sm-lh);
+  letter-spacing: var(--display-sm-ls);
+}
+
+/* Headline — high-emphasis headings to divide primary regions */
+.headline-lg {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: var(--headline-lg-size);
+  line-height: var(--headline-lg-lh);
+  letter-spacing: 0;
+}
+.headline-md {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: var(--headline-md-size);
+  line-height: var(--headline-md-lh);
+  letter-spacing: 0;
+}
+.headline-sm {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: var(--headline-sm-size);
+  line-height: var(--headline-sm-lh);
+  letter-spacing: 0;
+}
+
+/* Title — medium-emphasis headings to divide secondary regions */
+.title-lg {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: var(--title-lg-size);
+  line-height: var(--title-lg-lh);
+  letter-spacing: 0;
+}
+.title-md {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: var(--title-md-size);
+  line-height: var(--title-md-lh);
+  letter-spacing: 0;
+}
+.title-sm {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: var(--title-sm-size);
+  line-height: var(--title-sm-lh);
+  letter-spacing: 0;
+}
+
+/* Body — paragraphs, body copy */
+.body-lg {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: var(--body-lg-size);
+  line-height: var(--body-lg-lh);
+  letter-spacing: 0;
+}
+.body-md {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: var(--body-md-size);
+  line-height: var(--body-md-lh);
+  letter-spacing: 0;
+}
+.body-sm {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: var(--body-sm-size);
+  line-height: var(--body-sm-lh);
+  letter-spacing: var(--body-sm-ls);
+}
+
+/* Label — buttons, captions, supporting text */
+.label-lg {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: var(--label-lg-size);
+  line-height: var(--label-lg-lh);
+  letter-spacing: 0;
+}
+.label-md {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: var(--label-md-size);
+  line-height: var(--label-md-lh);
+  letter-spacing: 0;
+}
+.label-sm {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: var(--label-sm-size);
+  line-height: var(--label-sm-lh);
+  letter-spacing: var(--label-sm-ls);
 }
 
 /* ! tailwindcss v3.2.6 | MIT License | https://tailwindcss.com */

@@ -2257,34 +2257,12 @@ table.table-custom {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-  #intro {
-    height: auto;
-  }
-
   .hero-container {
-    padding: 1.5rem 1rem;
-    padding-top: calc(70px + 1rem);
-    padding-bottom: 0.5rem;
+    padding: 3rem 1rem;
+    padding-top: calc(80px + 3rem);
+    padding-bottom: 3rem;
     min-height: auto;
     height: auto;
-  }
-
-  .hero-badge {
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .about-container {
-    margin-top: 0;
-    padding: 0 1.5rem 1.5rem 1.5rem;
-  }
-
-  .about-content {
-    gap: 0.75rem;
-  }
-
-  .about-cta {
-    margin-top: 0.5rem;
   }
 
   .about-badge {
@@ -2338,8 +2316,8 @@ table.table-custom {
 @media (max-width: 480px) {
   .hero-container {
     padding: 2rem 0.75rem;
-    padding-top: calc(70px + 1.5rem);
-    padding-bottom: 0.5rem;
+    padding-top: calc(80px + 2rem);
+    padding-bottom: 2rem;
   }
 
   .hero-logo {
@@ -2370,13 +2348,11 @@ table.table-custom {
   .hero-badge {
     font-size: 0.75rem;
     padding: 0.5rem 1rem;
-    margin-top: 0.75rem;
-    margin-bottom: 0.5rem;
   }
 
   .about-container {
-    padding: 0 1rem 2rem 1rem;
-    gap: 2rem;
+    padding: 0.15rem 1rem 3rem 1rem;
+    gap: 3rem;
   }
 
   .about-cards {

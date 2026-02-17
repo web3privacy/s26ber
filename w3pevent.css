@@ -4492,45 +4492,40 @@ footer.mobile-footer {
 .footer-bottom-section {
   padding: 2rem 1.5rem 3rem 1.5rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 1.5rem;
   text-align: center;
 }
 
-.footer-column {
+.footer-nav {
   display: flex;
-  flex-direction: column;
-  text-align: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem 1.75rem;
 }
 
-.footer-column-title {
-  font-family: "Inter", sans-serif;
-  font-weight: 500;
-  font-size: var(--title-md-size);
-  line-height: var(--title-md-lh);
-  letter-spacing: 0;
-  color: #ffffff;
-  margin: 0 0 0.75rem 0;
-  padding: 0;
-  position: relative;
-  display: inline-block;
-  text-align: center;
-}
-
-.footer-links-list {
-  list-style: none;
-  padding: 0;
-  margin: 1rem 0 0 0;
+.footer-social-icons {
   display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+  flex-direction: row;
+  gap: 1.25rem;
+  align-items: center;
+  justify-content: center;
 }
 
-.footer-links-list li {
-  margin: 0;
-  padding: 0;
+.footer-social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.65;
+  transition: opacity 0.2s ease;
+  filter: brightness(0) invert(1);
+}
+
+.footer-social-icon:hover {
+  opacity: 1;
 }
 
 .footer-link {
@@ -4573,19 +4568,18 @@ footer.mobile-footer {
 
   .footer-bottom-section {
     flex-direction: row;
-    justify-content: center;
-    gap: 4rem;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
     padding: 2.5rem 2.5rem 4rem 2.5rem;
   }
 
-  .footer-column-title {
-    font-size: 1.25rem;
+  .footer-nav {
+    justify-content: flex-start;
   }
 
-  .footer-column-title::after {
-    width: 30px;
-    height: 2.5px;
-    bottom: -8px;
+  .footer-social-icons {
+    justify-content: flex-end;
   }
 
   .footer-link {
@@ -4614,17 +4608,8 @@ footer.mobile-footer {
   }
 
   .footer-bottom-section {
-    gap: 6rem;
+    gap: 2rem;
     padding: 3rem 3rem 5rem 3rem;
-  }
-
-  .footer-column-title {
-    font-size: 1.375rem;
-  }
-
-  .footer-column-title::after {
-    width: 35px;
-    bottom: -10px;
   }
 }
 
@@ -4651,22 +4636,7 @@ footer.mobile-footer {
 
   .footer-bottom-section {
     padding: 1.75rem 1.25rem 2.5rem 1.25rem;
-    gap: 2rem;
-  }
-
-  .footer-column-title {
-    font-size: 1rem;
-  }
-
-  .footer-column-title::after {
-    width: 20px;
-    height: 1.5px;
-    bottom: -5px;
-  }
-
-  .footer-links-list {
-    gap: 0.625rem;
-    margin-top: 0.875rem;
+    gap: 1.25rem;
   }
 
   .footer-link {

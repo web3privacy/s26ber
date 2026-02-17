@@ -2952,7 +2952,7 @@ table.table-custom {
 
 .testimonials-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin-top: 0;
 }
@@ -3066,12 +3066,25 @@ table.table-custom {
   }
 
   .testimonials-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    gap: 1rem;
     margin-top: 2rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .testimonials-grid::-webkit-scrollbar {
+    display: none;
   }
 
   .testimonial-card {
+    scroll-snap-align: start;
+    flex: 0 0 82vw;
+    max-width: 82vw;
     padding: 1.5rem;
   }
 
@@ -3149,8 +3162,7 @@ table.table-custom {
 .testimonials-show-more-container {
   display: flex;
   justify-content: center;
-  margin: 3rem 0;
-  grid-column: 1 / -1;
+  margin: 2rem 0 0 0;
 }
 
 .testimonials-show-more-btn {

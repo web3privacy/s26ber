@@ -3915,11 +3915,6 @@ html #faq,
     padding: 0.2rem 0.6rem;
   }
 
-  .team-badge {
-    padding: 0.6rem 1.5rem;
-    font-size: 0.8rem;
-    margin-bottom: 2rem;
-  }
 }
 
 @media (max-width: 600px) {
@@ -3995,11 +3990,6 @@ html #faq,
     padding: 0.15rem 0.5rem;
   }
 
-  .team-badge {
-    padding: 0.5rem 1.25rem;
-    font-size: 0.75rem;
-    margin-bottom: 1.5rem;
-  }
 }
 
 @media (max-width: 360px) {
@@ -4596,6 +4586,16 @@ footer.mobile-footer {
 /* Offset anchor scroll targets so fixed navbar doesn't cover section headings */
 #intro, #about, #partners, #tickets, #testimonials, #faq, #speakers, #team {
   scroll-margin-top: 96px;
+}
+
+/* Buttons: larger padding + font on mobile for tap targets */
+@media (max-width: 768px) {
+  .feature-btn,
+  .team-badge,
+  .cta-partner-badge {
+    padding: 0.8rem 2.25rem;
+    font-size: var(--label-md-size);
+  }
 }
 
 /* Hero venue line under tagline */

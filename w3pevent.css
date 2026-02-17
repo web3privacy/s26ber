@@ -3032,7 +3032,7 @@ table.table-custom {
   font-size: var(--body-sm-size);
   line-height: var(--body-sm-lh);
   letter-spacing: var(--body-sm-ls);
-  color: var(--brand-gray);
+  color: rgba(255, 255, 255, 0.55);
 }
 
 /* Testimonials Responsive Design */

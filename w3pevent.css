@@ -752,9 +752,6 @@ table.table-custom {
 #partners {
   background-color: transparent !important;
 }
-#partners .cta-partner-badge {
-  background-color: transparent !important;
-}
 #partners .cta-partner-btn {
   background-color: transparent !important;
 }
@@ -4284,11 +4281,11 @@ div[class*="bg-black"] .person-item img {
 .cta-partner-badge {
   background: linear-gradient(90deg, #090c16 0%, #1b224f 100%);
   color: var(--brand-white);
-  padding: 0.5rem 1.5rem !important;
+  padding: 0.5rem 1.5rem;
   border-radius: 25px;
   font-family: "Inter", sans-serif;
-  font-weight: 500 !important;
-  font-size: var(--label-sm-size) !important;
+  font-weight: 500;
+  font-size: var(--label-sm-size);
   line-height: var(--label-sm-lh);
   letter-spacing: var(--label-sm-ls);
   border: none;

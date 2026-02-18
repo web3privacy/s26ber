@@ -1877,7 +1877,7 @@ table.table-custom {
   height: 100vh;
   min-height: 600px;
   padding: 4rem 2rem;
-  padding-top: calc(80px + 4rem); /* Account for navbar height */
+  padding-top: calc(64px + 4rem); /* Account for navbar height */
   padding-bottom: 4rem;
   position: relative;
   overflow: hidden;
@@ -2256,7 +2256,7 @@ table.table-custom {
 @media (max-width: 768px) {
   .hero-container {
     padding: 1rem;
-    padding-top: calc(80px + 1rem);
+    padding-top: calc(48px + 1rem);
     padding-bottom: 1.5rem;
     height: 100svh;
     min-height: 100svh;
@@ -2323,7 +2323,7 @@ table.table-custom {
 @media (max-width: 480px) {
   .hero-container {
     padding: 1rem 0.75rem;
-    padding-top: calc(80px + 1rem);
+    padding-top: calc(48px + 1rem);
     padding-bottom: 1rem;
   }
 
@@ -2642,8 +2642,8 @@ table.table-custom {
 
   .navbar-minimal {
     position: relative;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
     background: rgba(0, 0, 0, 1); /* fully opaque on mobile — no bleed-through */
   }
 }
@@ -4585,7 +4585,7 @@ footer.mobile-footer {
 
 /* Offset anchor scroll targets so fixed navbar doesn't cover section headings */
 #intro, #about, #partners, #tickets, #testimonials, #faq, #speakers, #team {
-  scroll-margin-top: 96px;
+  scroll-margin-top: 72px;
 }
 
 /* Buttons: larger padding + font on mobile for tap targets */

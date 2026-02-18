@@ -4585,7 +4585,7 @@ footer.mobile-footer {
 
 /* Offset anchor scroll targets so fixed navbar doesn't cover section headings */
 #intro, #about, #partners, #tickets, #testimonials, #faq, #speakers, #team {
-  scroll-margin-top: 72px;
+  scroll-margin-top: 84px;
 }
 
 /* Buttons: larger padding + font on mobile for tap targets */

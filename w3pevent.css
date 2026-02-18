@@ -4460,13 +4460,13 @@ footer.mobile-footer {
   background-color: #000000;
 }
 
-/* Footer inner: 3-column layout */
+/* Footer inner layout */
 .footer-inner {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 3rem 2rem;
+  padding: 1.5rem 2.5rem;
   gap: 2rem;
 }
 
@@ -4501,9 +4501,9 @@ footer.mobile-footer {
 
 .footer-nav {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1.5rem;
 }
 
 .footer-social-icons {

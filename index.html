@@ -2446,15 +2446,17 @@
 
       // Testimonials Show More functionality
       function toggleTestimonials() {
+        const grid = document.querySelector('.testimonials-grid');
         const hiddenTestimonials = document.querySelectorAll('.testimonial-hidden');
         const showMoreBtn = document.getElementById('testimonials-show-more-btn');
-        
+
         if (hiddenTestimonials.length > 0) {
           // Show hidden testimonials
           hiddenTestimonials.forEach(testimonial => {
             testimonial.classList.remove('testimonial-hidden');
             testimonial.style.display = 'block';
           });
+          grid.classList.add('testimonials-expanded');
           showMoreBtn.textContent = 'Show Less Testimonials';
         } else {
           // Hide testimonials 5-19
@@ -2463,6 +2465,7 @@
             allTestimonials[i].classList.add('testimonial-hidden');
             allTestimonials[i].style.display = 'none';
           }
+          grid.classList.remove('testimonials-expanded');
           showMoreBtn.textContent = 'Show More Testimonials';
         }
       }

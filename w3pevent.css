@@ -2611,7 +2611,7 @@ table.table-custom {
 }
 
 .mobile-menu-panel .nav-link-minimal {
-  font-size: 1.35rem;
+  font-size: 1.45rem;
   letter-spacing: 0.02em;
 }
 
@@ -4267,8 +4267,8 @@ div[class*="bg-black"] .person-item img {
 
 /* === CTA PARTNER STYLES === */
 .cta-partner-section {
-  padding: 4rem 2rem;
-  margin: 4rem auto;
+  padding: 2rem 2rem;
+  margin: 1.5rem auto;
   border-radius: 30px;
   position: relative;
   overflow: hidden;
@@ -4414,8 +4414,8 @@ div[class*="bg-black"] .person-item img {
 
 @media (max-width: 768px) {
   .cta-partner-section {
-    padding: 3rem 1.5rem;
-    margin: 3rem auto;
+    padding: 1.5rem 1.5rem;
+    margin: 1rem auto;
   }
 
   .cta-partner-title {

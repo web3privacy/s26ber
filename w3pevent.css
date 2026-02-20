@@ -1,5 +1,6 @@
 /* v0.9 of CSS stylesheet for the Neo-Cypherpunk Summit - source: https://github.com/web3privacy/events_web */
 
+
 /* === BRAND COLORS === */
 :root {
   --brand-black: #000000;
@@ -532,30 +533,15 @@ video {
 }
 body {
   bg-opacity: 1;
-  background-color: #000000;
-  background-image: url("/img/desktop.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-color: #0e0324;
+  background-image: url("/img/bg-top.png"), url("/img/bg-bottom.png");
+  background-size: 100% auto, 100% auto;
+  background-position: top center, bottom center;
+  background-repeat: no-repeat, no-repeat;
 }
-/* Mobile browsers don't support fixed bg — use a fixed pseudo-element instead */
 @media (max-width: 767px) {
   body {
-    background-image: none;
-  }
-  body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("/img/desktop.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: -1;
+    background-size: auto 110vh, auto 110vh;
   }
 }
 * {

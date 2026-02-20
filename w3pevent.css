@@ -1963,6 +1963,7 @@ table.table-custom {
   width: 100%;
   margin: 0 auto;
   padding: 0 1rem;
+  box-sizing: border-box;
   flex: 1;
 }
 
@@ -2071,6 +2072,7 @@ table.table-custom {
     gap: 1.5rem;
     padding-top: 3rem;
   }
+
 }
 
 @media (min-width: 1024px) {

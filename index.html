@@ -2063,6 +2063,21 @@
           });
         });
       });
+      // Match hero-badge width to feature-btn on desktop
+      function matchBadgeWidth() {
+        const btn = document.querySelector('.hero-main .feature-btn');
+        const badge = document.querySelector('.hero-badge');
+        if (!btn || !badge) return;
+        if (window.innerWidth >= 768) {
+          badge.style.boxSizing = 'border-box';
+          badge.style.width = btn.offsetWidth + 'px';
+        } else {
+          badge.style.boxSizing = '';
+          badge.style.width = '';
+        }
+      }
+      matchBadgeWidth();
+      window.addEventListener('resize', matchBadgeWidth);
     </script>
   </body>
 </html>

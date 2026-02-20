@@ -52,6 +52,10 @@
   --label-sm-size: 11px;
   --label-sm-lh: 16px;
   --label-sm-ls: 2.5%;
+
+  /* === SPACING TOKENS === */
+  --section-gap: 4.5rem;      /* 72px — vertical gap between major sections */
+  --section-title-gap: 2rem;  /* 32px — gap below section titles */
 }
 
 /* Global overflow fix */
@@ -2911,8 +2915,8 @@ table.table-custom {
 /* === TESTIMONIALS SECTION === */
 .testimonials-section {
   color: var(--brand-white);
-  padding: 6rem 0;
-  margin: 0 2rem 0 2rem;
+  padding: 2rem 0;
+  margin: var(--section-gap) 2rem 0 2rem;
   border-radius: 24px;
   position: relative;
   overflow: hidden;
@@ -3071,8 +3075,8 @@ table.table-custom {
 /* Testimonials Responsive Design */
 @media (max-width: 768px) {
   .testimonials-section {
-    margin: 4rem 1rem 0 1rem;
-    padding: 4rem 0;
+    margin: var(--section-gap) 1rem 0 1rem;
+    padding: 2.5rem 0;
     border-radius: 20px;
   }
 
@@ -3134,7 +3138,7 @@ table.table-custom {
 
 @media (max-width: 480px) {
   .testimonials-section {
-    margin: 4rem 0.5rem 0 0.5rem;
+    margin: var(--section-gap) 0.5rem 0 0.5rem;
     padding: 3rem 0;
     border-radius: 16px;
   }
@@ -3273,6 +3277,7 @@ table.table-custom {
 
 /* FAQ and Footer Wrapper */
 .faq-footer-wrapper {
+  margin-top: var(--section-gap);
   margin-left: 6rem;
   margin-right: 6rem;
 }
@@ -3528,8 +3533,8 @@ html #faq,
 
 /* === TEAM SHOWCASE STYLES === */
 .team-showcase {
-  padding: 3rem 0 3rem 0;
-  margin: 4rem 2rem;
+  padding: 2rem 0 2rem 0;
+  margin: var(--section-gap) 2rem 0;
   border-radius: 32px;
   position: relative;
   overflow: hidden;
@@ -3564,7 +3569,6 @@ html #faq,
   font-size: var(--label-md-size);
   line-height: var(--label-md-lh);
   letter-spacing: 0;
-  margin-bottom: 3rem;
   border: 1px solid transparent;
   text-decoration: none;
   cursor: pointer;
@@ -3820,7 +3824,7 @@ html #faq,
 /* Enhanced Responsive Design */
 @media (max-width: 1200px) {
   .team-showcase {
-    margin: 3rem 1.5rem;
+    margin: var(--section-gap) 1.5rem 0;
     padding: 2.5rem 0 2.5rem 0;
   }
 
@@ -3837,7 +3841,7 @@ html #faq,
 
 @media (max-width: 1024px) {
   .team-showcase {
-    margin: 3rem 1rem;
+    margin: var(--section-gap) 1rem 0;
     padding: 2.25rem 0 2.25rem 0;
   }
 
@@ -3894,7 +3898,7 @@ html #faq,
 
 @media (max-width: 768px) {
   .team-showcase {
-    margin: 2rem 1rem;
+    margin: var(--section-gap) 1rem 0;
     padding: 2rem 0 2rem 0;
     border-radius: 24px;
   }
@@ -3935,7 +3939,7 @@ html #faq,
 
 @media (max-width: 600px) {
   .team-showcase {
-    margin: 1.5rem 0.75rem;
+    margin: var(--section-gap) 0.75rem 0;
     padding: 1.75rem 0 1.75rem 0;
     border-radius: 20px;
   }
@@ -3971,7 +3975,7 @@ html #faq,
 
 @media (max-width: 480px) {
   .team-showcase {
-    margin: 1rem 0.5rem;
+    margin: var(--section-gap) 0.5rem 0;
     padding: 1.5rem 0 1.5rem 0;
     border-radius: 16px;
   }
@@ -4010,7 +4014,7 @@ html #faq,
 
 @media (max-width: 360px) {
   .team-showcase {
-    margin: 0.75rem 0.25rem;
+    margin: var(--section-gap) 0.25rem 0;
     padding: 1.25rem 0 1.25rem 0;
   }
 
@@ -4067,6 +4071,7 @@ div[class*="bg-black"] .person-item img {
 
 #volunteer-section {
   background-color: transparent !important;
+  margin-top: var(--section-gap);
 }
 
 /* === SPEAKERS & MEMBERS BRAND STYLING === */

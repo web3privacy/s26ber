@@ -534,14 +534,18 @@ video {
 body {
   bg-opacity: 1;
   background-color: #0e0324;
-  background-image: url("/img/bg-top.png"), url("/img/bg-bottom.png");
-  background-size: 100% auto, 100% auto;
-  background-position: top center, bottom center;
-  background-repeat: no-repeat, no-repeat;
+  background-image:
+    url("/img/top left.svg"),
+    url("/img/top right.svg"),
+    url("/img/bottom left.svg"),
+    url("/img/bottom right.svg");
+  background-size: 50% auto, 50% auto, 50% auto, 50% auto;
+  background-position: top left, top right, bottom left, bottom right;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
 }
 @media (max-width: 767px) {
   body {
-    background-size: auto 110vh, auto 110vh;
+    background-size: 120% auto, 120% auto, 120% auto, 120% auto;
   }
 }
 * {

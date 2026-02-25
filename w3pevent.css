@@ -2936,16 +2936,15 @@ table.table-custom {
 .theme-flip-front {
   background: linear-gradient(
     135deg,
-    rgba(255, 255, 255, 0.03) 0%,
-    rgba(255, 255, 255, 0.08) 50%,
-    rgba(255, 255, 255, 0.03) 100%
+    #12082e 0%,
+    #1a0f38 50%,
+    #12082e 100%
   );
-  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .theme-flip-back {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  background: #1a0f38;
   transform: rotateY(180deg);
   border: 1px solid rgba(255, 255, 255, 0.15);
 }

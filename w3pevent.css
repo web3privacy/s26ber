@@ -1727,8 +1727,8 @@ table.table-custom {
 .footer-link {
   font-family: "Inter", sans-serif;
   font-weight: 500;
-  font-size: var(--label-md-size);
-  line-height: var(--label-md-lh);
+  font-size: var(--body-lg-size);
+  line-height: var(--body-lg-lh);
   letter-spacing: 0;
   text-align: left;
   text-underline-position: from-font;
@@ -4611,7 +4611,7 @@ footer.mobile-footer {
 .footer-description {
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  font-size: var(--body-md-size);
+  font-size: var(--body-lg-size);
   line-height: var(--body-md-lh);
   color: rgba(255, 255, 255, 0.8);
   margin: 0;
@@ -4649,8 +4649,8 @@ footer.mobile-footer {
 .footer-link {
   font-family: "Inter", sans-serif;
   font-weight: 500;
-  font-size: var(--label-md-size);
-  line-height: var(--label-md-lh);
+  font-size: var(--body-lg-size);
+  line-height: var(--body-lg-lh);
   letter-spacing: 0;
   color: #ffffff;
   text-decoration: none;
@@ -4695,11 +4695,11 @@ footer.mobile-footer {
   }
 
   .footer-description {
-    font-size: var(--body-sm-size);
+    font-size: var(--body-md-size);
   }
 
   .footer-link {
-    font-size: var(--label-sm-size);
+    font-size: var(--body-md-size);
   }
 }
 

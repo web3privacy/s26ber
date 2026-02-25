@@ -537,8 +537,8 @@ body {
   background-image:
     url("/img/top left.svg"),
     url("/img/top right.svg"),
-    url("/img/bottom left.svg"),
-    url("/img/bottom right.svg");
+    url("/img/bottom-left.svg"),
+    url("/img/bottom-right.svg");
   background-size: 50% auto, 50% auto, 50% auto, 50% auto;
   background-position: top left, top right, bottom left, bottom right;
   background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
@@ -2788,12 +2788,12 @@ table.table-custom {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid transparent;
   color: white;
-  padding: 0.75rem 2rem;
+  padding: 0.85rem 2.25rem;
   border-radius: 50px;
   font-family: "Inter", sans-serif;
   font-weight: 500;
-  font-size: var(--label-md-size);
-  line-height: var(--label-md-lh);
+  font-size: var(--body-lg-size);
+  line-height: var(--body-lg-lh);
   letter-spacing: 0;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -3664,12 +3664,12 @@ html #faq,
   display: inline-block;
   background: rgba(255, 255, 255, 0.08);
   color: var(--brand-white);
-  padding: 0.75rem 2rem;
+  padding: 0.85rem 2.25rem;
   border-radius: 50px;
   font-family: "Inter", sans-serif;
   font-weight: 500;
-  font-size: var(--label-md-size);
-  line-height: var(--label-md-lh);
+  font-size: var(--body-lg-size);
+  line-height: var(--body-lg-lh);
   letter-spacing: 0;
   border: 1px solid transparent;
   text-decoration: none;
@@ -4429,12 +4429,12 @@ div[class*="bg-black"] .person-item img {
 .cta-partner-badge {
   background: rgba(255, 255, 255, 0.08);
   color: var(--brand-white);
-  padding: 0.75rem 2rem;
+  padding: 0.85rem 2.25rem;
   border-radius: 50px;
   font-family: "Inter", sans-serif;
   font-weight: 500;
-  font-size: var(--label-md-size);
-  line-height: var(--label-md-lh);
+  font-size: var(--body-lg-size);
+  line-height: var(--body-lg-lh);
   letter-spacing: 0;
   border: 1px solid transparent;
   width: fit-content;

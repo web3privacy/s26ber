@@ -2140,7 +2140,7 @@ table.table-custom {
 
 .story-button {
   display: inline-block;
-  background: linear-gradient(90deg, #090c16 0%, #1b224f 100%);
+  background: rgba(255, 255, 255, 0.08);
   border: none;
   border-radius: 0.5rem;
   padding: 0.75rem 1.5rem;
@@ -2281,7 +2281,7 @@ table.table-custom {
   }
 
   .about-badge {
-    background: linear-gradient(90deg, #090c16 0%, #1b224f 100%);
+    background: rgba(255, 255, 255, 0.08);
     color: var(--brand-white);
     padding: 0.5rem 1.5rem;
     border-radius: 25px;
@@ -2747,7 +2747,7 @@ table.table-custom {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(90deg, #090c16 0%, #1b224f 100%);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .feature-icon svg {
@@ -2785,7 +2785,7 @@ table.table-custom {
 }
 
 .feature-btn {
-  background: linear-gradient(90deg, #090c16 0%, #1b224f 100%);
+  background: rgba(255, 255, 255, 0.08);
   border: 1px solid transparent;
   color: white;
   padding: 0.75rem 2rem;
@@ -3370,7 +3370,7 @@ table.table-custom {
 
 .language-btn:hover,
 .language-btn.active {
-  background: linear-gradient(90deg, #090c16 0%, #1b224f 100%);
+  background: rgba(255, 255, 255, 0.08);
   color: var(--brand-white);
   border-color: var(--brand-white);
 }
@@ -3662,7 +3662,7 @@ html #faq,
 
 .team-badge {
   display: inline-block;
-  background: linear-gradient(90deg, #090c16 0%, #1b224f 100%);
+  background: rgba(255, 255, 255, 0.08);
   color: var(--brand-white);
   padding: 0.75rem 2rem;
   border-radius: 50px;
@@ -3896,7 +3896,7 @@ html #faq,
   width: 40px;
   height: 40px;
   border-radius: 10px;
-  background: linear-gradient(90deg, #090c16 0%, #1b224f 100%);
+  background: rgba(255, 255, 255, 0.08);
   border: none;
   backdrop-filter: blur(10px);
   display: flex;
@@ -4427,7 +4427,7 @@ div[class*="bg-black"] .person-item img {
 }
 
 .cta-partner-badge {
-  background: linear-gradient(90deg, #090c16 0%, #1b224f 100%);
+  background: rgba(255, 255, 255, 0.08);
   color: var(--brand-white);
   padding: 0.75rem 2rem;
   border-radius: 50px;
@@ -4509,7 +4509,7 @@ div[class*="bg-black"] .person-item img {
 }
 
 .cta-partner-btn.primary {
-  background: linear-gradient(90deg, #090c16 0%, #1b224f 100%);
+  background: rgba(255, 255, 255, 0.08);
   color: var(--brand-white);
   border-color: none;
 }

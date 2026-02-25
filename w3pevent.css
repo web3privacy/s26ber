@@ -2727,7 +2727,6 @@ table.table-custom {
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
   position: relative;
-  aspect-ratio: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;

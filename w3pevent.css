@@ -2884,9 +2884,10 @@ table.table-custom {
 }
 
 .theme-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0;
@@ -2894,6 +2895,7 @@ table.table-custom {
 
 /* Flip card container */
 .theme-flip-card {
+  width: calc(33.333% - 1.5rem);
   height: 200px;
   cursor: pointer;
 }

@@ -2895,7 +2895,7 @@ table.table-custom {
 
 /* Flip card container */
 .theme-flip-card {
-  width: calc(33.333% - 1.5rem);
+  width: calc((100% - 4rem) / 3);
   height: 200px;
   cursor: pointer;
 }

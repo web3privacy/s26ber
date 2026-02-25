@@ -2878,6 +2878,119 @@ table.table-custom {
   }
 }
 
+/* ========== Theme Cards Section ========== */
+
+.theme-grid-desktop {
+  display: block;
+}
+
+.theme-accordion {
+  display: none;
+}
+
+.theme-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.theme-grid > .theme-card:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+  max-width: calc(50% - 1rem);
+  margin: 0 auto;
+}
+
+.theme-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.03) 0%,
+    rgba(255, 255, 255, 0.08) 50%,
+    rgba(255, 255, 255, 0.03) 100%
+  );
+  border: none;
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: left;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.theme-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.theme-number {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: var(--label-sm-size);
+  line-height: var(--label-sm-lh);
+  color: rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.75rem;
+}
+
+.theme-card .feature-title {
+  text-align: left;
+  font-size: var(--title-md-size);
+  line-height: var(--title-md-lh);
+  margin-bottom: 0.75rem;
+}
+
+.theme-question {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: var(--body-md-size);
+  line-height: var(--body-md-lh);
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 1rem;
+}
+
+.theme-description {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: var(--body-sm-size);
+  line-height: var(--body-sm-lh);
+  color: rgba(255, 255, 255, 0.7);
+  flex-grow: 1;
+}
+
+@media (max-width: 768px) {
+  .theme-grid-desktop {
+    display: none;
+  }
+
+  .theme-accordion {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  .theme-accordion .faq-question {
+    font-size: var(--title-sm-size);
+    line-height: var(--title-sm-lh);
+  }
+
+  .theme-accordion .faq-answer p em {
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .theme-accordion .theme-question {
+    margin-bottom: 0.75rem;
+  }
+}
+
 /* Extra small screens */
 @media (max-width: 480px) {
   #faq {

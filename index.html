@@ -197,6 +197,110 @@
         </div>
       </section>
 
+      <!-- Conference Themes Section -->
+      <section class="px-4" style="margin-top: var(--section-gap);">
+        <div class="text-center" style="margin-bottom: var(--section-title-gap);">
+          <h2 class="testimonials-title text-center">Themes</h2>
+        </div>
+
+        <!-- Desktop: Card Grid -->
+        <div class="theme-grid-desktop">
+          <div class="theme-grid">
+            <div class="theme-card">
+              <h3 class="feature-title">Cryptography as Civic Infrastructure</h3>
+              <p class="theme-question"><em>How do privacy tools become essential infrastructure for democratic participation serving technologists, journalists, organizers, and citizens?</em></p>
+              <p class="theme-description">Encryption, anonymous communication, and verifiable credentials are no longer niche concerns. Applied cryptography now functions as civic infrastructure: enabling whistleblowing, protecting protest movements, securing elections, and preserving press freedom. The focus is not the mathematics but the deployment.</p>
+            </div>
+            <div class="theme-card">
+              <h3 class="feature-title">Resistance Networks</h3>
+              <p class="theme-question"><em>How can privacy infrastructure be maintained under political duress to ensure the resilience and censorship-resistance of social movements?</em></p>
+              <p class="theme-description">This theme centers practical, field-tested approaches to censorship circumvention, mesh networking under surveillance, and secure coordination in hostile environments. It foregrounds the people deploying these tools in the hardest conditions, and asks what builders need to hear from them about case studies, operational security, and the gap between what exists and what's needed.</p>
+            </div>
+            <div class="theme-card">
+              <h3 class="feature-title">Open Protocols & Digital Autonomy</h3>
+              <p class="theme-question"><em>How do open protocols and p2p systems reshape power dynamics on the internet?</em></p>
+              <p class="theme-description">The open social web, federated infrastructure, and peer-to-peer architectures offer alternatives to platform capture and data extraction. This theme explores stack independence, protocol governance, interoperability, and practical shifts from centralized services to digital autonomy.</p>
+            </div>
+            <div class="theme-card">
+              <h3 class="feature-title">Surveillance, Policy & Legal Defense</h3>
+              <p class="theme-question"><em>How do current legal and regulatory frameworks impact the right to privacy, and what strategies are being used to navigate these changes?</em></p>
+              <p class="theme-description">Encryption policy, surveillance law, digital identity mandates, and the growing tension between state security claims and civil liberties all demand coordinated response. Human rights lawyers, policy researchers, and technologists come together here to map the regulatory landscape and coordinate defense from EU chat control to global ID schemes.</p>
+            </div>
+            <div class="theme-card">
+              <h3 class="feature-title">Privacy for the Commons</h3>
+              <p class="theme-question"><em>What strategies can we use to embed privacy as a collective habit instead of an individual burden?</em></p>
+              <p class="theme-description">Privacy is often framed as personal protection. This theme reframes it as a public good, examining community threat modeling, collective data stewardship, mutual aid security practices, and the cultural work of normalizing encryption. The central question is how those that need it the most can adopt privacy infrastructure at scale, not because they're technical, but because they care about each other.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Mobile: Accordion -->
+        <div class="theme-accordion">
+          <div class="faq-container mx-auto max-w-4xl">
+            <div class="faq-item">
+              <button class="faq-header" onclick="toggleTheme(1)">
+                <h3 class="faq-question">Cryptography as Civic Infrastructure</h3>
+                <span class="faq-icon" id="theme-icon-1">+</span>
+              </button>
+              <div class="faq-content" id="theme-content-1">
+                <div class="faq-answer">
+                  <p><em>How do privacy tools become essential infrastructure for democratic participation serving technologists, journalists, organizers, and citizens?</em></p>
+                  <p>Encryption, anonymous communication, and verifiable credentials are no longer niche concerns. Applied cryptography now functions as civic infrastructure: enabling whistleblowing, protecting protest movements, securing elections, and preserving press freedom. The focus is not the mathematics but the deployment.</p>
+                </div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-header" onclick="toggleTheme(2)">
+                <h3 class="faq-question">Resistance Networks</h3>
+                <span class="faq-icon" id="theme-icon-2">+</span>
+              </button>
+              <div class="faq-content" id="theme-content-2">
+                <div class="faq-answer">
+                  <p><em>How can privacy infrastructure be maintained under political duress to ensure the resilience and censorship-resistance of social movements?</em></p>
+                  <p>This theme centers practical, field-tested approaches to censorship circumvention, mesh networking under surveillance, and secure coordination in hostile environments. It foregrounds the people deploying these tools in the hardest conditions, and asks what builders need to hear from them about case studies, operational security, and the gap between what exists and what's needed.</p>
+                </div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-header" onclick="toggleTheme(3)">
+                <h3 class="faq-question">Open Protocols & Digital Autonomy</h3>
+                <span class="faq-icon" id="theme-icon-3">+</span>
+              </button>
+              <div class="faq-content" id="theme-content-3">
+                <div class="faq-answer">
+                  <p><em>How do open protocols and p2p systems reshape power dynamics on the internet?</em></p>
+                  <p>The open social web, federated infrastructure, and peer-to-peer architectures offer alternatives to platform capture and data extraction. This theme explores stack independence, protocol governance, interoperability, and practical shifts from centralized services to digital autonomy.</p>
+                </div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-header" onclick="toggleTheme(4)">
+                <h3 class="faq-question">Surveillance, Policy & Legal Defense</h3>
+                <span class="faq-icon" id="theme-icon-4">+</span>
+              </button>
+              <div class="faq-content" id="theme-content-4">
+                <div class="faq-answer">
+                  <p><em>How do current legal and regulatory frameworks impact the right to privacy, and what strategies are being used to navigate these changes?</em></p>
+                  <p>Encryption policy, surveillance law, digital identity mandates, and the growing tension between state security claims and civil liberties all demand coordinated response. Human rights lawyers, policy researchers, and technologists come together here to map the regulatory landscape and coordinate defense from EU chat control to global ID schemes.</p>
+                </div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-header" onclick="toggleTheme(5)">
+                <h3 class="faq-question">Privacy for the Commons</h3>
+                <span class="faq-icon" id="theme-icon-5">+</span>
+              </button>
+              <div class="faq-content" id="theme-content-5">
+                <div class="faq-answer">
+                  <p><em>What strategies can we use to embed privacy as a collective habit instead of an individual burden?</em></p>
+                  <p>Privacy is often framed as personal protection. This theme reframes it as a public good, examining community threat modeling, collective data stewardship, mutual aid security practices, and the cultural work of normalizing encryption. The central question is how those that need it the most can adopt privacy infrastructure at scale, not because they're technical, but because they care about each other.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <div id="speakers-2025" class="text-white px-4" style="display: none;">
         <div class="text-center" style="margin-top: 100px; margin-bottom: 30px;">
           <h2 class="testimonials-title text-center">
@@ -1865,6 +1969,36 @@
 
 
     <script>
+      function toggleTheme(index) {
+        const content = document.getElementById(`theme-content-${index}`);
+        const icon = document.getElementById(`theme-icon-${index}`);
+
+        for (let i = 1; i <= 5; i++) {
+          if (i !== index) {
+            const otherContent = document.getElementById(`theme-content-${i}`);
+            const otherIcon = document.getElementById(`theme-icon-${i}`);
+            if (otherContent && otherIcon) {
+              otherContent.classList.remove('active');
+              otherIcon.classList.remove('active');
+              otherIcon.textContent = '+';
+            }
+          }
+        }
+
+        if (content && icon) {
+          const isActive = content.classList.contains('active');
+          if (isActive) {
+            content.classList.remove('active');
+            icon.classList.remove('active');
+            icon.textContent = '+';
+          } else {
+            content.classList.add('active');
+            icon.classList.add('active');
+            icon.textContent = '−';
+          }
+        }
+      }
+
       function toggleFaq(index) {
         const content = document.getElementById(`faq-content-${index}`);
         const icon = document.getElementById(`faq-icon-${index}`);

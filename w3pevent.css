@@ -1246,8 +1246,8 @@ table.table-custom {
   line-height: 1.75rem;
 }
 .text-sm {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 .text-xl {
   font-size: 1.25rem;
@@ -2773,8 +2773,8 @@ table.table-custom {
 .feature-description {
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  font-size: var(--body-md-size);
-  line-height: var(--body-md-lh);
+  font-size: var(--body-lg-size);
+  line-height: var(--body-lg-lh);
   letter-spacing: 0;
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 1.5rem;
@@ -2950,8 +2950,8 @@ table.table-custom {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-style: italic;
-  font-size: var(--body-md-size);
-  line-height: var(--body-md-lh);
+  font-size: var(--body-lg-size);
+  line-height: var(--body-lg-lh);
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 1rem;
 }
@@ -2959,8 +2959,8 @@ table.table-custom {
 .theme-description {
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  font-size: var(--body-sm-size);
-  line-height: var(--body-sm-lh);
+  font-size: var(--body-lg-size);
+  line-height: var(--body-lg-lh);
   color: rgba(255, 255, 255, 0.7);
   flex-grow: 1;
 }
@@ -4290,9 +4290,9 @@ div[class*="bg-black"] .person-item img {
 .markdown-basic {
   font-family: "Inter", sans-serif !important;
   font-weight: 400 !important;
-  font-size: var(--body-sm-size) !important;
-  line-height: var(--body-sm-lh);
-  letter-spacing: var(--body-sm-ls);
+  font-size: var(--body-md-size) !important;
+  line-height: var(--body-md-lh);
+  letter-spacing: var(--body-md-ls);
   color: rgba(255, 255, 255, 0.8) !important;
   /* Text clamping for speaker descriptions */
   display: -webkit-box;
@@ -4300,7 +4300,7 @@ div[class*="bg-black"] .person-item img {
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-height: calc(var(--body-sm-lh) * 2);
+  max-height: calc(var(--body-md-lh) * 2);
 }
 
 .markdown-basic p {

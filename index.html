@@ -209,33 +209,63 @@
           <h2 class="testimonials-title text-center">Themes</h2>
         </div>
 
-        <!-- Desktop: Card Grid -->
+        <!-- Desktop: Flip Card Grid -->
         <div class="theme-grid-desktop">
           <div class="theme-grid">
-            <div class="theme-card">
-              <h3 class="feature-title">Cryptography as Civic Infrastructure</h3>
-              <p class="theme-question"><em>How do privacy tools become essential infrastructure for democratic participation serving technologists, journalists, organizers, and citizens?</em></p>
-              <p class="theme-description">Encryption, anonymous communication, and verifiable credentials are no longer niche concerns. Applied cryptography now functions as civic infrastructure: enabling whistleblowing, protecting protest movements, securing elections, and preserving press freedom. The focus is not the mathematics but the deployment.</p>
+            <div class="theme-flip-card">
+              <div class="theme-flip-inner">
+                <div class="theme-flip-front">
+                  <h3 class="theme-flip-title">Cryptography as Civic Infrastructure</h3>
+                  <p class="theme-flip-question">How do privacy tools become essential infrastructure for democratic participation?</p>
+                </div>
+                <div class="theme-flip-back">
+                  <p>Encryption, anonymous communication, and verifiable credentials are no longer niche concerns. Applied cryptography now functions as civic infrastructure: enabling whistleblowing, protecting protest movements, securing elections, and preserving press freedom. The focus is not the mathematics but the deployment.</p>
+                </div>
+              </div>
             </div>
-            <div class="theme-card">
-              <h3 class="feature-title">Resistance Networks</h3>
-              <p class="theme-question"><em>How can privacy infrastructure be maintained under political duress to ensure the resilience and censorship-resistance of social movements?</em></p>
-              <p class="theme-description">This theme centers practical, field-tested approaches to censorship circumvention, mesh networking under surveillance, and secure coordination in hostile environments. It foregrounds the people deploying these tools in the hardest conditions, and asks what builders need to hear from them about case studies, operational security, and the gap between what exists and what's needed.</p>
+            <div class="theme-flip-card">
+              <div class="theme-flip-inner">
+                <div class="theme-flip-front">
+                  <h3 class="theme-flip-title">Resistance Networks</h3>
+                  <p class="theme-flip-question">How can privacy infrastructure be maintained under political duress?</p>
+                </div>
+                <div class="theme-flip-back">
+                  <p>This theme centers practical, field-tested approaches to censorship circumvention, mesh networking under surveillance, and secure coordination in hostile environments. It foregrounds the people deploying these tools in the hardest conditions, and asks what builders need to hear from them.</p>
+                </div>
+              </div>
             </div>
-            <div class="theme-card">
-              <h3 class="feature-title">Open Protocols & Digital Autonomy</h3>
-              <p class="theme-question"><em>How do open protocols and p2p systems reshape power dynamics on the internet?</em></p>
-              <p class="theme-description">The open social web, federated infrastructure, and peer-to-peer architectures offer alternatives to platform capture and data extraction. This theme explores stack independence, protocol governance, interoperability, and practical shifts from centralized services to digital autonomy.</p>
+            <div class="theme-flip-card">
+              <div class="theme-flip-inner">
+                <div class="theme-flip-front">
+                  <h3 class="theme-flip-title">Open Protocols & Digital Autonomy</h3>
+                  <p class="theme-flip-question">How do open protocols and p2p systems reshape power dynamics on the internet?</p>
+                </div>
+                <div class="theme-flip-back">
+                  <p>The open social web, federated infrastructure, and peer-to-peer architectures offer alternatives to platform capture and data extraction. This theme explores stack independence, protocol governance, interoperability, and practical shifts from centralized services to digital autonomy.</p>
+                </div>
+              </div>
             </div>
-            <div class="theme-card">
-              <h3 class="feature-title">Surveillance, Policy & Legal Defense</h3>
-              <p class="theme-question"><em>How do current legal and regulatory frameworks impact the right to privacy, and what strategies are being used to navigate these changes?</em></p>
-              <p class="theme-description">Encryption policy, surveillance law, digital identity mandates, and the growing tension between state security claims and civil liberties all demand coordinated response. Human rights lawyers, policy researchers, and technologists come together here to map the regulatory landscape and coordinate defense from EU chat control to global ID schemes.</p>
+            <div class="theme-flip-card">
+              <div class="theme-flip-inner">
+                <div class="theme-flip-front">
+                  <h3 class="theme-flip-title">Surveillance, Policy & Legal Defense</h3>
+                  <p class="theme-flip-question">How do legal and regulatory frameworks impact the right to privacy?</p>
+                </div>
+                <div class="theme-flip-back">
+                  <p>Encryption policy, surveillance law, digital identity mandates, and the growing tension between state security claims and civil liberties all demand coordinated response. Human rights lawyers, policy researchers, and technologists come together here to map the regulatory landscape and coordinate defense.</p>
+                </div>
+              </div>
             </div>
-            <div class="theme-card">
-              <h3 class="feature-title">Privacy for the Commons</h3>
-              <p class="theme-question"><em>What strategies can we use to embed privacy as a collective habit instead of an individual burden?</em></p>
-              <p class="theme-description">Privacy is often framed as personal protection. This theme reframes it as a public good, examining community threat modeling, collective data stewardship, mutual aid security practices, and the cultural work of normalizing encryption. The central question is how those that need it the most can adopt privacy infrastructure at scale, not because they're technical, but because they care about each other.</p>
+            <div class="theme-flip-card">
+              <div class="theme-flip-inner">
+                <div class="theme-flip-front">
+                  <h3 class="theme-flip-title">Privacy for the Commons</h3>
+                  <p class="theme-flip-question">What strategies can embed privacy as a collective habit instead of an individual burden?</p>
+                </div>
+                <div class="theme-flip-back">
+                  <p>Privacy is often framed as personal protection. This theme reframes it as a public good, examining community threat modeling, collective data stewardship, mutual aid security practices, and the cultural work of normalizing encryption at scale.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -1361,7 +1391,7 @@
           </div>
         </div>
         <div class="text-center mt-10 mb-4">
-          <a href="https://tally.so/r/nrOzXl" class="cta-partner-badge" target="_blank">Speak at Neocypherpunk Summit</a>
+          <a href="https://tally.so/r/nrOzXl" class="cta-partner-badge" target="_blank">Apply to speak</a>
         </div>
       </div>
 
@@ -2096,64 +2126,6 @@
         }
       }
 
-      // Team showcase navigation
-      let currentTeamIndex = 0;
-      const teamMembers = [
-        { name: "Mykola", image: "./img/mykola.png", handle: "@nicksvyaznoy", description: "Leadership" },
-        { name: "PG", image: "./img/pg1.png", handle: "@PG_CDG", description: "Partnerships" },
-        { name: "Beth", image: "./img/beth.jpg", handle: "@ontologymachine", description: "Program Direction" },
-        { name: "Dani", image: "./img/daniel.jpg", handle: "@danisaturn", description: "Operations" },
-        { name: "Teresa", image: "./img/teresa.jpg", handle: "teresaneppi.com", description: "Design" },
-        { name: "Coinmandeer", image: "./img/coinmandeer.png", handle: "@KeenOfCoin", description: "Design" },
-        { name: "Robert", image: "./img/robert.png", handle: "@robdotrego", description: "Community" },
-        { name: "Federico", image: "./img/babybit.jpeg", handle: "@BabyBitProd", description: "AV Delivery" },
-        { name: "Jensei", image: "./img/jensei.jpg", handle: "@jensei_", description: "Free Software Fit" },
-      ];
-
-      function updateTeamDisplay() {
-        const avatars = document.querySelectorAll('.team-avatar');
-        const startIndex = currentTeamIndex;
-        
-        avatars.forEach((avatar, index) => {
-          const memberIndex = (startIndex + index) % teamMembers.length;
-          const member = teamMembers[memberIndex];
-          const img = avatar.querySelector('img');
-          const nameElement = avatar.querySelector('.team-member-name');
-          const linkElement = avatar.querySelector('.team-member-link');
-          
-          if (img && member) {
-            img.src = member.image;
-            img.alt = member.name;
-          }
-          
-          if (nameElement && member) {
-            nameElement.textContent = member.name;
-          }
-          
-          if (linkElement && member && member.handle) {
-            linkElement.textContent = member.handle;
-            linkElement.href = `https://x.com/${member.handle.replace('@', '')}`;
-          }
-          
-          // Mark center avatar as featured
-          avatar.classList.toggle('featured', index === 2);
-        });
-      }
-
-      function nextTeam() {
-        currentTeamIndex = (currentTeamIndex + 1) % teamMembers.length;
-        updateTeamDisplay();
-      }
-
-      function previousTeam() {
-        currentTeamIndex = (currentTeamIndex - 1 + teamMembers.length) % teamMembers.length;
-        updateTeamDisplay();
-      }
-
-      // Initialize team display
-      document.addEventListener('DOMContentLoaded', function() {
-        updateTeamDisplay();
-      });
 
       // Testimonials Show More functionality
       function toggleTestimonials() {

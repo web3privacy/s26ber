@@ -2777,10 +2777,6 @@ table.table-custom {
   letter-spacing: 0;
   color: rgba(255, 255, 255, 0.8);
   margin-bottom: 1.5rem;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
   flex-grow: 1;
 }
 

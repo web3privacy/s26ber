@@ -2096,64 +2096,6 @@
         }
       }
 
-      // Team showcase navigation
-      let currentTeamIndex = 0;
-      const teamMembers = [
-        { name: "Mykola", image: "./img/mykola.png", handle: "@nicksvyaznoy", description: "Leadership" },
-        { name: "PG", image: "./img/pg1.png", handle: "@PG_CDG", description: "Partnerships" },
-        { name: "Beth", image: "./img/beth.jpg", handle: "@ontologymachine", description: "Program Direction" },
-        { name: "Dani", image: "./img/daniel.jpg", handle: "@danisaturn", description: "Operations" },
-        { name: "Teresa", image: "./img/teresa.jpg", handle: "teresaneppi.com", description: "Design" },
-        { name: "Coinmandeer", image: "./img/coinmandeer.png", handle: "@KeenOfCoin", description: "Design" },
-        { name: "Robert", image: "./img/robert.png", handle: "@robdotrego", description: "Community" },
-        { name: "Federico", image: "./img/babybit.jpeg", handle: "@BabyBitProd", description: "AV Delivery" },
-        { name: "Jensei", image: "./img/jensei.jpg", handle: "@jensei_", description: "Free Software Fit" },
-      ];
-
-      function updateTeamDisplay() {
-        const avatars = document.querySelectorAll('.team-avatar');
-        const startIndex = currentTeamIndex;
-        
-        avatars.forEach((avatar, index) => {
-          const memberIndex = (startIndex + index) % teamMembers.length;
-          const member = teamMembers[memberIndex];
-          const img = avatar.querySelector('img');
-          const nameElement = avatar.querySelector('.team-member-name');
-          const linkElement = avatar.querySelector('.team-member-link');
-          
-          if (img && member) {
-            img.src = member.image;
-            img.alt = member.name;
-          }
-          
-          if (nameElement && member) {
-            nameElement.textContent = member.name;
-          }
-          
-          if (linkElement && member && member.handle) {
-            linkElement.textContent = member.handle;
-            linkElement.href = `https://x.com/${member.handle.replace('@', '')}`;
-          }
-          
-          // Mark center avatar as featured
-          avatar.classList.toggle('featured', index === 2);
-        });
-      }
-
-      function nextTeam() {
-        currentTeamIndex = (currentTeamIndex + 1) % teamMembers.length;
-        updateTeamDisplay();
-      }
-
-      function previousTeam() {
-        currentTeamIndex = (currentTeamIndex - 1 + teamMembers.length) % teamMembers.length;
-        updateTeamDisplay();
-      }
-
-      // Initialize team display
-      document.addEventListener('DOMContentLoaded', function() {
-        updateTeamDisplay();
-      });
 
       // Testimonials Show More functionality
       function toggleTestimonials() {

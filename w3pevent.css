@@ -2892,72 +2892,89 @@ table.table-custom {
   padding: 0;
 }
 
-.theme-grid > .theme-card:last-child:nth-child(odd) {
+.theme-grid > .theme-flip-card:last-child:nth-child(odd) {
   grid-column: 1 / -1;
   max-width: calc(50% - 1rem);
   margin: 0 auto;
 }
 
-.theme-card {
+/* Flip card container */
+.theme-flip-card {
+  perspective: 1000px;
+  min-height: 280px;
+}
+
+.theme-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  transition: transform 0.6s ease;
+  transform-style: preserve-3d;
+}
+
+.theme-flip-card:hover .theme-flip-inner {
+  transform: rotateY(180deg);
+}
+
+.theme-flip-front,
+.theme-flip-back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: 20px;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.theme-flip-front {
   background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.03) 0%,
     rgba(255, 255, 255, 0.08) 50%,
     rgba(255, 255, 255, 0.03) 100%
   );
-  border: none;
-  border-radius: 20px;
-  padding: 2rem;
-  text-align: left;
-  transition: all 0.3s ease;
   backdrop-filter: blur(10px);
-  position: relative;
-  display: flex;
-  flex-direction: column;
 }
 
-.theme-card:hover {
+.theme-flip-back {
   background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-5px);
-  border-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  transform: rotateY(180deg);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
-.theme-number {
+.theme-flip-back p {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: var(--body-lg-size);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.theme-flip-title {
   font-family: "Inter", sans-serif;
   font-weight: 500;
-  font-size: var(--label-sm-size);
-  line-height: var(--label-sm-lh);
-  color: rgba(255, 255, 255, 0.5);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  margin-bottom: 0.75rem;
+  font-size: var(--headline-lg-size);
+  line-height: var(--headline-lg-lh);
+  letter-spacing: 0;
+  color: white;
+  margin-bottom: 1rem;
 }
 
-.theme-card .feature-title {
-  text-align: left;
-  font-size: var(--title-md-size);
-  line-height: var(--title-md-lh);
-  margin-bottom: 0.75rem;
-}
-
-.theme-question {
+.theme-flip-question {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-style: italic;
   font-size: var(--body-lg-size);
   line-height: var(--body-lg-lh);
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 1rem;
-}
-
-.theme-description {
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: var(--body-lg-size);
-  line-height: var(--body-lg-lh);
   color: rgba(255, 255, 255, 0.7);
-  flex-grow: 1;
 }
 
 @media (max-width: 768px) {
@@ -2979,10 +2996,6 @@ table.table-custom {
   .theme-accordion .faq-answer p em {
     display: block;
     margin-bottom: 1rem;
-  }
-
-  .theme-accordion .theme-question {
-    margin-bottom: 0.75rem;
   }
 }
 

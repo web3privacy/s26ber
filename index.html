@@ -159,14 +159,15 @@
       <section class="feature-carousel px-4" style="margin-top: var(--section-gap);">
         <div class="text-center" style="margin-bottom: var(--section-title-gap);">
           <h2 id="program" class="testimonials-title text-center">
-            Privacy for the freedom of people
+            What to Expect
           </h2>
         </div>
 
-        <div class="feature-grid">
+        <!-- Desktop: 3×2 Grid -->
+        <div class="feature-grid feature-grid-desktop">
           <div class="feature-card">
             <div class="feature-image">
-              <img src="./img/debates.png" alt="Debates" class="feature-img">
+              <img src="./img/dialogue.png" alt="Dialogue" class="feature-img" style="object-position: center 30%;">
             </div>
             <h3 class="feature-title">Dialogue</h3>
             <p class="feature-description">
@@ -176,9 +177,9 @@
 
           <div class="feature-card">
             <div class="feature-image">
-              <img src="./img/showcases.JPG" alt="Showcases" class="feature-img">
+              <img src="./img/knowledge-exchange.jpeg" alt="Knowledge Exchange" class="feature-img">
             </div>
-            <h3 class="feature-title">Skill Sharing</h3>
+            <h3 class="feature-title">Knowledge Exchange</h3>
             <p class="feature-description">
               Develop skills, strategies and intuition for resistance, resilience and advocacy.
             </p>
@@ -192,6 +193,126 @@
             <p class="feature-description">
               Activations and participatory programming inviting exploration through creativity and play.
             </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-image">
+              <img src="./img/field-building.png" alt="Field Building" class="feature-img">
+            </div>
+            <h3 class="feature-title">Field Building</h3>
+            <p class="feature-description">
+              Nourish a cross-disciplinary community of practice exploring how privacy mediates power.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-image">
+              <img src="./img/showcases.png" alt="Showcases" class="feature-img">
+            </div>
+            <h3 class="feature-title">Showcases</h3>
+            <p class="feature-description">
+              Discover bold ideas, meet the makers, and explore innovations shaping the future.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-image">
+              <img src="./img/debates.png" alt="Debates" class="feature-img">
+            </div>
+            <h3 class="feature-title">Debates</h3>
+            <p class="feature-description">
+              Discourse to identify and bridge gaps in knowledge, alignment, values and vision.
+            </p>
+          </div>
+        </div>
+
+        <!-- Mobile: Collapsible Accordion (matches theme accordion style) -->
+        <div class="feature-accordion">
+          <div class="faq-container mx-auto max-w-4xl">
+            <div class="faq-item">
+              <button class="faq-header" onclick="toggleExpect(1)">
+                <h3 class="faq-question">Dialogue</h3>
+                <span class="faq-icon" id="expect-icon-1">+</span>
+              </button>
+              <div class="faq-content" id="expect-content-1">
+                <div class="faq-answer">
+                  <div class="feature-image" style="border-radius: 12px; overflow: hidden; margin-bottom: 1rem;">
+                    <img src="./img/dialogue.png" alt="Dialogue" class="feature-img" style="object-position: center 30%;">
+                  </div>
+                  <p>World-class leaders go head-to-head, rethinking the systems and norms that shape our world.</p>
+                </div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-header" onclick="toggleExpect(2)">
+                <h3 class="faq-question">Knowledge Exchange</h3>
+                <span class="faq-icon" id="expect-icon-2">+</span>
+              </button>
+              <div class="faq-content" id="expect-content-2">
+                <div class="faq-answer">
+                  <div class="feature-image" style="border-radius: 12px; overflow: hidden; margin-bottom: 1rem;">
+                    <img src="./img/knowledge-exchange.jpeg" alt="Knowledge Exchange" class="feature-img">
+                  </div>
+                  <p>Develop skills, strategies and intuition for resistance, resilience and advocacy.</p>
+                </div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-header" onclick="toggleExpect(3)">
+                <h3 class="faq-question">Rituals</h3>
+                <span class="faq-icon" id="expect-icon-3">+</span>
+              </button>
+              <div class="faq-content" id="expect-content-3">
+                <div class="faq-answer">
+                  <div class="feature-image" style="border-radius: 12px; overflow: hidden; margin-bottom: 1rem;">
+                    <img src="./img/rituals.jpg" alt="Rituals" class="feature-img">
+                  </div>
+                  <p>Activations and participatory programming inviting exploration through creativity and play.</p>
+                </div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-header" onclick="toggleExpect(4)">
+                <h3 class="faq-question">Field Building</h3>
+                <span class="faq-icon" id="expect-icon-4">+</span>
+              </button>
+              <div class="faq-content" id="expect-content-4">
+                <div class="faq-answer">
+                  <div class="feature-image" style="border-radius: 12px; overflow: hidden; margin-bottom: 1rem;">
+                    <img src="./img/field-building.png" alt="Field Building" class="feature-img">
+                  </div>
+                  <p>Nourish a cross-disciplinary community of practice exploring how privacy mediates power.</p>
+                </div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-header" onclick="toggleExpect(5)">
+                <h3 class="faq-question">Showcases</h3>
+                <span class="faq-icon" id="expect-icon-5">+</span>
+              </button>
+              <div class="faq-content" id="expect-content-5">
+                <div class="faq-answer">
+                  <div class="feature-image" style="border-radius: 12px; overflow: hidden; margin-bottom: 1rem;">
+                    <img src="./img/showcases.png" alt="Showcases" class="feature-img">
+                  </div>
+                  <p>Discover bold ideas, meet the makers, and explore innovations shaping the future.</p>
+                </div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-header" onclick="toggleExpect(6)">
+                <h3 class="faq-question">Debates</h3>
+                <span class="faq-icon" id="expect-icon-6">+</span>
+              </button>
+              <div class="faq-content" id="expect-content-6">
+                <div class="faq-answer">
+                  <div class="feature-image" style="border-radius: 12px; overflow: hidden; margin-bottom: 1rem;">
+                    <img src="./img/debates.png" alt="Debates" class="feature-img">
+                  </div>
+                  <p>Discourse to identify and bridge gaps in knowledge, alignment, values and vision.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -2164,6 +2285,36 @@
 
 
     <script>
+      function toggleExpect(index) {
+        const content = document.getElementById(`expect-content-${index}`);
+        const icon = document.getElementById(`expect-icon-${index}`);
+
+        for (let i = 1; i <= 6; i++) {
+          if (i !== index) {
+            const otherContent = document.getElementById(`expect-content-${i}`);
+            const otherIcon = document.getElementById(`expect-icon-${i}`);
+            if (otherContent && otherIcon) {
+              otherContent.classList.remove('active');
+              otherIcon.classList.remove('active');
+              otherIcon.textContent = '+';
+            }
+          }
+        }
+
+        if (content && icon) {
+          const isActive = content.classList.contains('active');
+          if (isActive) {
+            content.classList.remove('active');
+            icon.classList.remove('active');
+            icon.textContent = '+';
+          } else {
+            content.classList.add('active');
+            icon.classList.add('active');
+            icon.textContent = '\u2212';
+          }
+        }
+      }
+
       function toggleTheme(index) {
         const content = document.getElementById(`theme-content-${index}`);
         const icon = document.getElementById(`theme-icon-${index}`);

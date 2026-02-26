@@ -2040,8 +2040,8 @@ table.table-custom {
 .hero-tagline {
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  font-size: var(--body-lg-size);
-  line-height: var(--body-lg-lh);
+  font-size: var(--title-lg-size);
+  line-height: var(--title-lg-lh);
   letter-spacing: 0;
   color: rgba(255, 255, 255, 0.8);
   max-width: 500px;
@@ -2331,7 +2331,7 @@ table.table-custom {
   }
 
   .hero-tagline {
-    font-size: 1rem;
+    font-size: 1.15rem;
     max-width: 90%;
   }
 
@@ -2366,7 +2366,7 @@ table.table-custom {
   }
 
   .hero-tagline {
-    font-size: 0.9rem;
+    font-size: 1.05rem;
   }
 
   .hero-badge {

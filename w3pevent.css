@@ -2058,26 +2058,35 @@ table.table-custom {
   text-decoration: underline;
 }
 
-.venue-images {
+.venue-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.venue-images-stack {
   display: flex;
+  flex-direction: column;
   gap: 1rem;
 }
 
 .venue-img {
-  width: calc(50% - 0.5rem);
+  width: 100%;
   border: 1px solid rgba(255, 255, 255, 0.2);
   filter: grayscale(100%);
   transition: filter 0.3s ease;
   object-fit: cover;
+  border-radius: 12px;
+}
+
+.venue-text {
+  text-align: left;
 }
 
 @media (max-width: 768px) {
-  .venue-images {
-    flex-direction: column;
-  }
-
-  .venue-img {
-    width: 100%;
+  .venue-layout {
+    grid-template-columns: 1fr;
   }
 }
 

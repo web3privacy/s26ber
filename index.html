@@ -159,39 +159,160 @@
       <section class="feature-carousel px-4" style="margin-top: var(--section-gap);">
         <div class="text-center" style="margin-bottom: var(--section-title-gap);">
           <h2 id="program" class="testimonials-title text-center">
-            Privacy for the freedom of people
+            What to Expect
           </h2>
         </div>
 
-        <div class="feature-grid">
+        <!-- Desktop: 3×2 Grid -->
+        <div class="feature-grid feature-grid-desktop">
           <div class="feature-card">
             <div class="feature-image">
-              <img src="./img/debates.png" alt="Debates" class="feature-img">
+              <img src="./img/dialogue.png" alt="Dialogue" class="feature-img" style="object-position: center 30%;">
             </div>
             <h3 class="feature-title">Dialogue</h3>
             <p class="feature-description">
-              World-class leaders go head-to-head, rethinking the systems and norms that shape our world.
+              Discourse to identify and bridge gaps in knowledge, alignment, values and vision.
             </p>
           </div>
 
           <div class="feature-card">
             <div class="feature-image">
-              <img src="./img/showcases.JPG" alt="Showcases" class="feature-img">
+              <img src="./img/knowledge-exchange.jpeg" alt="Knowledge Exchange" class="feature-img">
             </div>
-            <h3 class="feature-title">Skill Sharing</h3>
+            <h3 class="feature-title">Knowledge Exchange</h3>
             <p class="feature-description">
-              Develop skills, strategies and intuition for resistance, resilience and advocacy.
+              Develop skills, strategies and intuition for hacking, organizing and advocacy.
             </p>
           </div>
 
           <div class="feature-card">
             <div class="feature-image">
-              <img src="./img/rituals.JPG" alt="Rituals" class="feature-img">
+              <img src="./img/rituals.jpg" alt="Rituals" class="feature-img">
             </div>
             <h3 class="feature-title">Rituals</h3>
             <p class="feature-description">
               Activations and participatory programming inviting exploration through creativity and play.
             </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-image">
+              <img src="./img/field-building.png" alt="Field Building" class="feature-img">
+            </div>
+            <h3 class="feature-title">Field Building</h3>
+            <p class="feature-description">
+              Nourish a cross-disciplinary community of practice exploring how privacy mediates power.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-image">
+              <img src="./img/showcases.png" alt="Showcases" class="feature-img">
+            </div>
+            <h3 class="feature-title">Showcases</h3>
+            <p class="feature-description">
+              Discover bold ideas, meet the makers, and explore innovations shaping the future.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-image">
+              <img src="./img/debates.png" alt="Debates" class="feature-img">
+            </div>
+            <h3 class="feature-title">Debates</h3>
+            <p class="feature-description">
+              World-class leaders go head-to-head, rethinking the systems and norms that shape our world.
+            </p>
+          </div>
+        </div>
+
+        <!-- Mobile: Collapsible Accordion (matches theme accordion style) -->
+        <div class="feature-accordion">
+          <div class="faq-container mx-auto max-w-4xl">
+            <div class="faq-item">
+              <button class="faq-header" onclick="toggleExpect(1)">
+                <h3 class="faq-question">Dialogue</h3>
+                <span class="faq-icon" id="expect-icon-1">+</span>
+              </button>
+              <div class="faq-content" id="expect-content-1">
+                <div class="faq-answer">
+                  <div class="feature-image" style="border-radius: 12px; overflow: hidden; margin-bottom: 1rem;">
+                    <img src="./img/dialogue.png" alt="Dialogue" class="feature-img" style="object-position: center 30%;">
+                  </div>
+                  <p>Discourse to identify and bridge gaps in knowledge, alignment, values and vision.</p>
+                </div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-header" onclick="toggleExpect(2)">
+                <h3 class="faq-question">Knowledge Exchange</h3>
+                <span class="faq-icon" id="expect-icon-2">+</span>
+              </button>
+              <div class="faq-content" id="expect-content-2">
+                <div class="faq-answer">
+                  <div class="feature-image" style="border-radius: 12px; overflow: hidden; margin-bottom: 1rem;">
+                    <img src="./img/knowledge-exchange.jpeg" alt="Knowledge Exchange" class="feature-img">
+                  </div>
+                  <p>Develop skills, strategies and intuition for hacking, organizing and advocacy.</p>
+                </div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-header" onclick="toggleExpect(3)">
+                <h3 class="faq-question">Rituals</h3>
+                <span class="faq-icon" id="expect-icon-3">+</span>
+              </button>
+              <div class="faq-content" id="expect-content-3">
+                <div class="faq-answer">
+                  <div class="feature-image" style="border-radius: 12px; overflow: hidden; margin-bottom: 1rem;">
+                    <img src="./img/rituals.jpg" alt="Rituals" class="feature-img">
+                  </div>
+                  <p>Activations and participatory programming inviting exploration through creativity and play.</p>
+                </div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-header" onclick="toggleExpect(4)">
+                <h3 class="faq-question">Field Building</h3>
+                <span class="faq-icon" id="expect-icon-4">+</span>
+              </button>
+              <div class="faq-content" id="expect-content-4">
+                <div class="faq-answer">
+                  <div class="feature-image" style="border-radius: 12px; overflow: hidden; margin-bottom: 1rem;">
+                    <img src="./img/field-building.png" alt="Field Building" class="feature-img">
+                  </div>
+                  <p>Nourish a cross-disciplinary community of practice exploring how privacy mediates power.</p>
+                </div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-header" onclick="toggleExpect(5)">
+                <h3 class="faq-question">Showcases</h3>
+                <span class="faq-icon" id="expect-icon-5">+</span>
+              </button>
+              <div class="faq-content" id="expect-content-5">
+                <div class="faq-answer">
+                  <div class="feature-image" style="border-radius: 12px; overflow: hidden; margin-bottom: 1rem;">
+                    <img src="./img/showcases.png" alt="Showcases" class="feature-img">
+                  </div>
+                  <p>Discover bold ideas, meet the makers, and explore innovations shaping the future.</p>
+                </div>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-header" onclick="toggleExpect(6)">
+                <h3 class="faq-question">Debates</h3>
+                <span class="faq-icon" id="expect-icon-6">+</span>
+              </button>
+              <div class="faq-content" id="expect-content-6">
+                <div class="faq-answer">
+                  <div class="feature-image" style="border-radius: 12px; overflow: hidden; margin-bottom: 1rem;">
+                    <img src="./img/debates.png" alt="Debates" class="feature-img">
+                  </div>
+                  <p>World-class leaders go head-to-head, rethinking the systems and norms that shape our world.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -1358,14 +1479,16 @@
                 <div class="mt-1 text-sm text-mild">IPFS Foundation</div>
               </div>
             </div>
-            <div class="hover:bg-white hover:text-black person-item border border-white/30">
+            <a href="https://x.com/1yunglong" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
               <div>
                 <img src="./img/speakers-2026/alessandro-longo.jpg" alt="speaker" class="aspect-square object-cover w-full">
               </div>
               <div class="pb-4 px-4">
                 <div class="mt-4 speaker-name">ALESSANDRO LONGO</div>
+                <div class="mt-1 text-sm text-mild">Project Reincantamento</div>
+                <div class="mt-1 text-sm text-mild">@1yunglong</div>
               </div>
-            </div>
+            </a>
             <a href="https://x.com/TMIYChao" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
               <div>
                 <img src="./img/speakers-2026/mario-havel.jpg" alt="speaker" class="aspect-square object-cover w-full">
@@ -1426,13 +1549,33 @@
                 <div class="mt-1 text-sm text-mild">@callebtc</div>
               </div>
             </a>
-            <div class="hover:bg-white hover:text-black person-item border border-white/30">
+            <a href="https://x.com/AdamPeterBurns" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
               <div>
                 <img src="./img/adam-burns.png" alt="speaker" class="aspect-square object-cover w-full">
               </div>
               <div class="pb-4 px-4">
                 <div class="mt-4 speaker-name">ADAM BURNS</div>
                 <div class="mt-1 text-sm text-mild">free2air, Dyne</div>
+                <div class="mt-1 text-sm text-mild">@AdamPeterBurns</div>
+              </div>
+            </a>
+            <a href="https://x.com/ariskomporozos" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
+              <div>
+                <img src="./img/speakers-2026/athanasiou.png" alt="speaker" class="aspect-square object-cover w-full">
+              </div>
+              <div class="pb-4 px-4">
+                <div class="mt-4 speaker-name">ARIS KOMPOROZOS-ATHANASIOU</div>
+                <div class="mt-1 text-sm text-mild">University College London</div>
+                <div class="mt-1 text-sm text-mild">@ariskomporozos</div>
+              </div>
+            </a>
+            <div class="hover:bg-white hover:text-black person-item border border-white/30">
+              <div>
+                <img src="./img/speakers-2026/daniel-calderon.jpg" alt="speaker" class="aspect-square object-cover w-full">
+              </div>
+              <div class="pb-4 px-4">
+                <div class="mt-4 speaker-name">DANIEL CALDERON</div>
+                <div class="mt-1 text-sm text-mild">Zalando SE</div>
               </div>
             </div>
             <div class="person-item border border-white/30">
@@ -1457,10 +1600,13 @@
         </div>
         <div class="mx-auto max-w-4xl text-center">
           <p class="text-lg" style="line-height: 1.7; color: rgba(255,255,255,0.85);">
-            Neocypherpunk shifts from its original 1990s focus of the isolated individual to the networked collective. It acknowledges that in an age of near total surveillance, privacy is no longer a solo escape, but a shared atmosphere we breathe. By treating encryption and open protocols as a common resource, it builds the resilient, community-rooted infrastructure needed for movements to survive and flourish under pressure.
+            The cypherpunk movement, rooted in Eric Hughes' 1993 manifesto, held that cryptography is a political act: writing code to protect privacy is itself resistance to centralized power. That conviction produced PGP, Tor, BitTorrent, and ultimately Bitcoin and Ethereum. But its emphasis was on the sovereign individual, the lone cryptographer building tools in defiance of the state.
           </p>
-          <p class="mt-6">
-            <a class="underline external" href="https://vitalik.eth.limo/general/2023/12/28/cypherpunk.html" target="_blank" rel="noopener noreferrer" style="color: rgba(255,255,255,0.7);">Read Vitalik Buterin's essay on cypherpunk values →</a>
+          <p class="text-lg mt-4" style="line-height: 1.7; color: rgba(255,255,255,0.85);">
+            Neocypherpunk carries that conviction forward while expanding who it's for. Where the original cypherpunks built for rugged individuals, neocypherpunk insists that privacy must be practiced collectively to be sustained. Encryption, open protocols, and decentralized infrastructure are shared resources, maintained and defended by communities. The goal is not withdrawal from public life but building the conditions under which movements and ordinary people can communicate, organize, and hold power to account without being surveilled, silenced, or captured.
+          </p>
+          <p class="text-lg mt-4" style="line-height: 1.7; color: rgba(255,255,255,0.85);">
+            Discover more about the neocypherpunk movement in essays by <a class="underline external" href="https://vitalik.eth.limo/general/2023/12/28/cypherpunk.html" target="_blank" rel="noopener noreferrer" style="color: rgba(255,255,255,0.7);">Vitalik Buterin</a> and <a class="underline external" href="https://www.projectglitch.xyz/p/what-in-the-world-is-a-neo-cypherpunk" target="_blank" rel="noopener noreferrer" style="color: rgba(255,255,255,0.7);">Project Glitch</a>.
           </p>
         </div>
       </section>
@@ -1495,13 +1641,22 @@
         </div>
       </section>
 
-      <!-- Partners Section -->
+      <!-- Donors Section -->
       <div id="partners" class="text-white px-4" style="margin-top: var(--section-gap);">
         <div class="text-center" style="margin-bottom: var(--section-title-gap);">
-          <div class="testimonials-title">Partners</div>
-          <div class="display-md text-mild mt-4">We are so grateful to the projects who make Neocypherpunk Summit possible</div>
+          <div class="testimonials-title">Donors</div>
+          <div class="display-md text-mild mt-4">Thank you for your support in making the Neocypherpunk Summit possible!</div>
         </div>
-        <div class="grid gap-4 grid-cols-2 md:grid-cols-4 lg:grid-cols-4 mx-auto" style="max-width: 1100px;">
+        <div class="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-3 mx-auto" style="max-width: 840px;">
+          <a href="https://www.protocol.ai/" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
+            <div class="p-4">
+              <img src="./img/sponsors-2026/protocol-labs.png" alt="Protocol Labs" class="aspect-[16/11] w-full h-full object-contain">
+            </div>
+            <div class="pb-4 px-4">
+              <div class="mt-4 speaker-name">PROTOCOL LABS</div>
+              <div class="mt-1 text-sm text-mild">@protocollabs</div>
+            </div>
+          </a>
           <a href="https://www.ethswarm.org/" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
             <div class="p-4">
               <img src="./img/sponsors-2026/swarm.png" alt="Swarm" class="aspect-[16/11] w-full h-full object-contain">
@@ -1520,15 +1675,16 @@
               <div class="mt-1 text-sm text-mild">@Logos_network</div>
             </div>
           </a>
-          <a href="https://www.protocol.ai/" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
-            <div class="p-4">
-              <img src="./img/sponsors-2026/protocol-labs.png" alt="Protocol Labs" class="aspect-[16/11] w-full h-full object-contain">
-            </div>
-            <div class="pb-4 px-4">
-              <div class="mt-4 speaker-name">PROTOCOL LABS</div>
-              <div class="mt-1 text-sm text-mild">@protocollabs</div>
-            </div>
-          </a>
+        </div>
+      </div>
+
+      <!-- Partners Section -->
+      <div class="text-white px-4" style="margin-top: var(--section-gap);">
+        <div class="text-center" style="margin-bottom: var(--section-title-gap);">
+          <div class="testimonials-title">Partners</div>
+          <div class="display-md text-mild mt-4">We are grateful for your trust, care and collaboration</div>
+        </div>
+        <div class="grid gap-4 grid-cols-2 md:grid-cols-4 lg:grid-cols-4 mx-auto" style="max-width: 1100px;">
           <a href="https://ethereum.foundation/" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
             <div class="p-4">
               <img src="./img/sponsors-2026/eth.png" alt="Ethereum Foundation" class="aspect-[16/11] w-full h-full object-contain">
@@ -1545,6 +1701,33 @@
             <div class="pb-4 px-4">
               <div class="mt-4 speaker-name">DYNE.ORG</div>
               <div class="mt-1 text-sm text-mild">@DaboraOrg</div>
+            </div>
+          </a>
+          <a href="https://consensys.io/diligence" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
+            <div class="p-4">
+              <img src="./img/consensys-diligence.webp" alt="Consensys Diligence" class="aspect-[16/11] w-full h-full object-contain">
+            </div>
+            <div class="pb-4 px-4">
+              <div class="mt-4 speaker-name">CONSENSYS DILIGENCE</div>
+              <div class="mt-1 text-sm text-mild">@ConsenSysAudits</div>
+            </div>
+          </a>
+          <a href="https://brave.com/" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
+            <div class="p-4">
+              <img src="./img/brave.png" alt="Brave" class="aspect-[16/11] w-full h-full object-contain">
+            </div>
+            <div class="pb-4 px-4">
+              <div class="mt-4 speaker-name">BRAVE</div>
+              <div class="mt-1 text-sm text-mild">@brave</div>
+            </div>
+          </a>
+          <a href="https://www.torproject.org/" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
+            <div class="p-4">
+              <img src="./img/tor.jpg" alt="Tor Project" class="aspect-[16/11] w-full h-full object-contain">
+            </div>
+            <div class="pb-4 px-4">
+              <div class="mt-4 speaker-name">TOR PROJECT</div>
+              <div class="mt-1 text-sm text-mild">@torproject</div>
             </div>
           </a>
           <a href="https://www.gnosis.io/" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
@@ -1565,6 +1748,15 @@
               <div class="mt-1 text-sm text-mild">@funkaborlin</div>
             </div>
           </a>
+          <a href="https://zuberlin.com/" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
+            <div class="p-4">
+              <img src="./img/zuberlin.png" alt="ZuBerlin" class="aspect-[16/11] w-full h-full object-contain">
+            </div>
+            <div class="pb-4 px-4">
+              <div class="mt-4 speaker-name">ZUBERLIN</div>
+              <div class="mt-1 text-sm text-mild">@ZuBerlin</div>
+            </div>
+          </a>
         </div>
       </div>
       <!-- Previous Events Section -->
@@ -1573,22 +1765,22 @@
         <div>
           <div class="grid gap-2 grid-cols-2 md:grid-cols-4 lg:grid-cols-3 xl:grid-cols-3">
             <div class="person-item">
+              <img src="./img/event1.jpg" alt="vibes" class="aspect-square object-cover w-full rounded-xl">
+            </div>
+            <div class="person-item">
               <img src="./img/congress-promo1.png" alt="vibes" class="aspect-square object-cover w-full rounded-xl">
             </div>
             <div class="person-item">
-              <img src="./img/congress-promo2.png" alt="vibes" class="aspect-square object-cover w-full rounded-xl">
-            </div>
-            <div class="person-item">
-              <img src="./img/congress-promo3.png" alt="vibes" class="aspect-square object-cover w-full rounded-xl">
-            </div>
-            <div class="person-item">
-              <img src="./img/congress-promo4.png" alt="vibes" class="aspect-square object-cover w-full rounded-xl">
-            </div>
-            <div class="person-item">
-              <img src="./img/event9.png" alt="vibes" class="aspect-square object-cover w-full rounded-xl">
+              <img src="./img/speaking-3.png" alt="vibes" class="aspect-square object-cover w-full rounded-xl">
             </div>
             <div class="person-item">
               <img src="./img/event4.png" alt="vibes" class="aspect-square object-cover w-full rounded-xl">
+            </div>
+            <div class="person-item">
+              <img src="./img/event5.jpeg" alt="vibes" class="aspect-square object-cover w-full rounded-xl">
+            </div>
+            <div class="person-item">
+              <img src="./img/event6.png" alt="vibes" class="aspect-square object-cover w-full rounded-xl">
             </div>
             <div class="person-item">
               <img src="./img/event2.png" alt="vibes" class="aspect-square object-cover w-full rounded-xl">
@@ -1600,13 +1792,13 @@
               <img src="./img/event7.png" alt="vibes" class="aspect-square object-cover w-full rounded-xl">
             </div>
             <div class="person-item">
-              <img src="./img/event8.png" alt="vibes" class="aspect-square object-cover w-full rounded-xl">
+              <img src="./img/event8.jpg" alt="vibes" class="aspect-square object-cover w-full rounded-xl">
             </div>
             <div class="person-item">
-              <img src="./img/event5.png" alt="vibes" class="aspect-square object-cover w-full rounded-xl">
+              <img src="./img/event11.png" alt="vibes" class="aspect-square object-cover w-full rounded-xl">
             </div>
             <div class="person-item">
-              <img src="./img/event6.png" alt="vibes" class="aspect-square object-cover w-full rounded-xl">
+              <img src="./img/event12.png" alt="vibes" class="aspect-square object-cover w-full rounded-xl">
             </div>
           </div>
         </div>
@@ -2137,6 +2329,36 @@
 
 
     <script>
+      function toggleExpect(index) {
+        const content = document.getElementById(`expect-content-${index}`);
+        const icon = document.getElementById(`expect-icon-${index}`);
+
+        for (let i = 1; i <= 6; i++) {
+          if (i !== index) {
+            const otherContent = document.getElementById(`expect-content-${i}`);
+            const otherIcon = document.getElementById(`expect-icon-${i}`);
+            if (otherContent && otherIcon) {
+              otherContent.classList.remove('active');
+              otherIcon.classList.remove('active');
+              otherIcon.textContent = '+';
+            }
+          }
+        }
+
+        if (content && icon) {
+          const isActive = content.classList.contains('active');
+          if (isActive) {
+            content.classList.remove('active');
+            icon.classList.remove('active');
+            icon.textContent = '+';
+          } else {
+            content.classList.add('active');
+            icon.classList.add('active');
+            icon.textContent = '\u2212';
+          }
+        }
+      }
+
       function toggleTheme(index) {
         const content = document.getElementById(`theme-content-${index}`);
         const icon = document.getElementById(`theme-icon-${index}`);

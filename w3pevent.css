@@ -2871,17 +2871,24 @@ table.table-custom {
   stroke-width: 2;
 }
 
+/* Feature accordion - hidden on desktop, visible on mobile */
+.feature-accordion {
+  display: none;
+}
+
 @media (max-width: 768px) {
-  .feature-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    max-width: 100%;
+  .feature-grid-desktop {
+    display: none;
   }
 
-  .feature-card {
+  .feature-accordion {
+    display: block;
     max-width: 100%;
     margin: 0 auto;
-    padding: 0 !important;
+  }
+
+  .feature-accordion .faq-content.active {
+    max-height: 800px;
   }
 
   .carousel-nav {
@@ -3511,11 +3518,12 @@ html #faq,
 
 .faq-content.active {
   max-height: 500px;
+  padding-top: 0.5rem;
   padding-bottom: 1.5rem;
 }
 
 .faq-answer {
-  padding: 1rem 2rem 0;
+  padding: 0.5rem 2rem 0;
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: var(--body-lg-size);

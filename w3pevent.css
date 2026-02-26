@@ -2040,21 +2040,22 @@ table.table-custom {
 .hero-tagline {
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  font-size: var(--title-lg-size);
-  line-height: var(--title-lg-lh);
+  font-size: var(--headline-md-size);
+  line-height: var(--headline-md-lh);
   letter-spacing: 0;
-  color: rgba(255, 255, 255, 0.8);
+  color: #ffffff;
   max-width: 500px;
   margin: 0;
 }
 
 .hero-tagline a {
-  color: rgba(255, 255, 255, 0.8);
+  color: #ffffff;
   text-decoration: none;
 }
 
 .hero-tagline a:hover {
   color: #ffffff;
+  text-decoration: underline;
 }
 
 @media (min-width: 768px) {

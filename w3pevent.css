@@ -2617,7 +2617,7 @@ table.table-custom {
   align-items: center;
   justify-content: center;
   opacity: 0;
-  animation: menuFadeIn 0.25s ease forwards;
+  animation: menuFadeIn 0.2s ease forwards;
 }
 
 .mobile-menu-close {
@@ -2664,20 +2664,8 @@ table.table-custom {
 }
 
 /* Checkbox-based toggle logic */
-#mobile-menu-toggle:checked ~ .navbar-minimal .hamburger-icon {
-  display: none !important;
-}
-
-#mobile-menu-toggle:checked ~ .navbar-minimal .close-icon {
-  display: none !important;
-}
-
 #mobile-menu-toggle:checked ~ .mobile-menu-panel {
   display: flex !important;
-}
-
-#mobile-menu-toggle:checked ~ .navbar-minimal .mobile-nav {
-  z-index: 10001;
 }
 
 /* Mobile responsiveness */
@@ -4372,8 +4360,8 @@ div[class*="bg-black"] .person-item img {
     font-size: 0.8rem !important;
   }
 
-  /* Hide only Twitter handles on mobile, keep org visible */
-  .person-item .text-mild:last-child {
+  /* Hide Twitter handles on mobile (only when there's an org + handle, hide the handle) */
+  .person-item .text-mild + .text-mild {
     display: none !important;
   }
 

@@ -2040,8 +2040,8 @@ table.table-custom {
 .hero-tagline {
   font-family: "Inter", sans-serif;
   font-weight: 400;
-  font-size: var(--headline-md-size);
-  line-height: var(--headline-md-lh);
+  font-size: var(--headline-sm-size);
+  line-height: var(--headline-sm-lh);
   letter-spacing: 0;
   color: #ffffff;
   max-width: 500px;
@@ -2056,6 +2056,29 @@ table.table-custom {
 .hero-tagline a:hover {
   color: #ffffff;
   text-decoration: underline;
+}
+
+.venue-images {
+  display: flex;
+  gap: 1rem;
+}
+
+.venue-img {
+  width: calc(50% - 0.5rem);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .venue-images {
+    flex-direction: column;
+  }
+
+  .venue-img {
+    width: 100%;
+  }
 }
 
 @media (min-width: 768px) {

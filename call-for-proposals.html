@@ -7,9 +7,11 @@
     <link rel="icon" href="./favicon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#000000">
-    <meta http-equiv="content-security-policy" content="script-src 'self' 'unsafe-inline' 'unsafe-eval' https://talx.dod.ngo; style-src 'self' 'unsafe-inline' https://talx.dod.ngo; connect-src 'self' https://talx.dod.ngo; form-action 'self';">
+    <meta http-equiv="content-security-policy" content="script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; form-action 'self';">
     <link href="./w3pevent.css?v=4" rel="stylesheet">
-    <script type="text/javascript" src="https://talx.dod.ngo/neocypherpunk-summit-2026/widgets/schedule.js"></script>
+    <style>
+      .person-item img { filter: grayscale(0%) !important; }
+    </style>
     <title>Call for Proposals | Neocypherpunk Summit</title>
     <meta name="description" content="Call for Proposals - Neocypherpunk Summit | 14 Jun 2026">
     <meta name="twitter:card" content="summary">
@@ -121,17 +123,376 @@
           <h1 class="testimonials-title text-center">Call for Proposals</h1>
         </div>
 
-        <!-- Pretalx Schedule Widget -->
-        <div class="max-w-6xl mx-auto">
-          <pretalx-schedule event-url="https://talx.dod.ngo/neocypherpunk-summit-2026/" locale="en" format="grid" style="--pretalx-clr-primary: #0e0324"></pretalx-schedule>
-          <noscript>
-            <div class="pretalx-widget">
-              <div class="pretalx-widget-info-message">
-                JavaScript is disabled in your browser. To access our schedule without JavaScript,
-                please <a target="_blank" href="https://talx.dod.ngo/neocypherpunk-summit-2026/schedule/">click here</a>.
+        <div class="max-w-6xl mx-auto text-center">
+          <a href="https://talx.dod.ngo/neocypherpunk-summit-2026/cfp" target="_blank" class="btn-primary" style="display: inline-block; padding: 16px 48px; font-size: 1.1rem;">Submit a Proposal</a>
+        </div>
+      </div>
+
+      <!-- Speakers -->
+      <div class="text-white px-4" style="margin-top: var(--section-gap);">
+        <div class="text-center" style="margin-bottom: var(--section-title-gap);">
+          <h2 class="testimonials-title text-center">Speakers</h2>
+        </div>
+        <div>
+          <div class="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            <!-- Keynotes -->
+            <a href="https://x.com/jaromil" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
+              <div>
+                <img src="./img/speakers-2026/jaromil-roio.jpg" alt="speaker" class="aspect-square object-cover w-full">
+              </div>
+              <div class="pb-4 px-4">
+                <div class="mt-4 speaker-name">DENIS "JAROMIL" ROIO</div>
+                <div class="mt-1 text-sm text-mild">Dyne</div>
+                <div class="mt-1 text-sm text-mild">@jaromil</div>
+              </div>
+            </a>
+            <a href="https://x.com/juanbenet" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
+              <div>
+                <img src="./img/speakers-2026/juan-benet.jpg" alt="speaker" class="aspect-square object-cover w-full">
+              </div>
+              <div class="pb-4 px-4">
+                <div class="mt-4 speaker-name">JUAN BENET</div>
+                <div class="mt-1 text-sm text-mild">Protocol Labs</div>
+                <div class="mt-1 text-sm text-mild">@juanbenet</div>
+              </div>
+            </a>
+            <a href="https://x.com/xdamman" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
+              <div>
+                <img src="./img/speakers-2026/xavier-dammen.jpg" alt="speaker" class="aspect-square object-cover w-full">
+              </div>
+              <div class="pb-4 px-4">
+                <div class="mt-4 speaker-name">XAVIER DAMMAN</div>
+                <div class="mt-1 text-sm text-mild">Open Collective</div>
+                <div class="mt-1 text-sm text-mild">@xdamman</div>
+              </div>
+            </a>
+            <a href="https://x.com/jarradhope_" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
+              <div>
+                <img src="./img/speakers-2026/jarrad-hope.png" alt="speaker" class="aspect-square object-cover w-full">
+              </div>
+              <div class="pb-4 px-4">
+                <div class="mt-4 speaker-name">JARRAD HOPE</div>
+                <div class="mt-1 text-sm text-mild">Logos</div>
+                <div class="mt-1 text-sm text-mild">@jarradhope_</div>
+              </div>
+            </a>
+            <a href="https://x.com/MarinaMarkezic" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
+              <div>
+                <img src="./img/speakers-2026/marina-markezic.jpg" alt="speaker" class="aspect-square object-cover w-full">
+              </div>
+              <div class="pb-4 px-4">
+                <div class="mt-4 speaker-name">MARINA MARKEZIC</div>
+                <div class="mt-1 text-sm text-mild">EUCI</div>
+                <div class="mt-1 text-sm text-mild">@MarinaMarkezic</div>
+              </div>
+            </a>
+            <!-- Other speakers -->
+            <a href="https://x.com/heckerhut" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
+              <div>
+                <img src="./img/speakers-2026/florian-glatz.jpg" alt="speaker" class="aspect-square object-cover w-full">
+              </div>
+              <div class="pb-4 px-4">
+                <div class="mt-4 speaker-name">FLORIAN GLATZ</div>
+                <div class="mt-1 text-sm text-mild">Freedom Browser, EUCI</div>
+                <div class="mt-1 text-sm text-mild">@heckerhut</div>
+              </div>
+            </a>
+            <a href="https://x.com/Suitpossum" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
+              <div>
+                <img src="./img/speakers-2026/brett-scott.jpg" alt="speaker" class="aspect-square object-cover w-full">
+              </div>
+              <div class="pb-4 px-4">
+                <div class="mt-4 speaker-name">BRETT SCOTT</div>
+                <div class="mt-1 text-sm text-mild">Author</div>
+                <div class="mt-1 text-sm text-mild">@Suitpossum</div>
+              </div>
+            </a>
+            <a href="https://x.com/post_polar_" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
+              <div>
+                <img src="./img/speakers-2026/paul-dylan-ennis.jpg" alt="speaker" class="aspect-square object-cover w-full">
+              </div>
+              <div class="pb-4 px-4">
+                <div class="mt-4 speaker-name">PAUL DYLAN-ENNIS</div>
+                <div class="mt-1 text-sm text-mild">University College Dublin</div>
+                <div class="mt-1 text-sm text-mild">@post_polar_</div>
+              </div>
+            </a>
+            <a href="https://x.com/Julio_Linares_" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
+              <div>
+                <img src="./img/speakers-2026/julio-linares.jpg" alt="speaker" class="aspect-square object-cover w-full">
+              </div>
+              <div class="pb-4 px-4">
+                <div class="mt-4 speaker-name">JULIO LINARES</div>
+                <div class="mt-1 text-sm text-mild">Author, Poetic Technologies</div>
+                <div class="mt-1 text-sm text-mild">@Julio_Linares_</div>
+              </div>
+            </a>
+            <a href="https://x.com/mpg_dd" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
+              <div>
+                <img src="./img/speakers-2026/tara-merk.jpg" alt="speaker" class="aspect-square object-cover w-full">
+              </div>
+              <div class="pb-4 px-4">
+                <div class="mt-4 speaker-name">TARA MERK</div>
+                <div class="mt-1 text-sm text-mild">PhD BlockchainGov, Metagov</div>
+                <div class="mt-1 text-sm text-mild">@mpg_dd</div>
+              </div>
+            </a>
+            <a href="https://x.com/rakymnft" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
+              <div>
+                <img src="./img/migle.png" alt="speaker" class="aspect-square object-cover w-full">
+              </div>
+              <div class="pb-4 px-4">
+                <div class="mt-4 speaker-name">MIGLE RAKITAITE</div>
+                <div class="mt-1 text-sm text-mild">Swarm Foundation, WinPrivacy</div>
+                <div class="mt-1 text-sm text-mild">@rakymnft</div>
+              </div>
+            </a>
+            <a href="https://x.com/willscott" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
+              <div>
+                <img src="./img/speakers-2026/will-scott.png" alt="speaker" class="aspect-square object-cover w-full">
+              </div>
+              <div class="pb-4 px-4">
+                <div class="mt-4 speaker-name">WILL SCOTT</div>
+                <div class="mt-1 text-sm text-mild">Protocol Labs</div>
+                <div class="mt-1 text-sm text-mild">@willscott</div>
+              </div>
+            </a>
+            <div class="hover:bg-white hover:text-black person-item border border-white/30">
+              <div>
+                <img src="./img/speakers-2026/robin-berjon.jpg" alt="speaker" class="aspect-square object-cover w-full">
+              </div>
+              <div class="pb-4 px-4">
+                <div class="mt-4 speaker-name">ROBIN BERJON</div>
+                <div class="mt-1 text-sm text-mild">IPFS Foundation</div>
               </div>
             </div>
-          </noscript>
+            <a href="https://x.com/1yunglong" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
+              <div>
+                <img src="./img/speakers-2026/alessandro-longo.jpg" alt="speaker" class="aspect-square object-cover w-full">
+              </div>
+              <div class="pb-4 px-4">
+                <div class="mt-4 speaker-name">ALESSANDRO LONGO</div>
+                <div class="mt-1 text-sm text-mild">Reincantamento</div>
+                <div class="mt-1 text-sm text-mild">@1yunglong</div>
+              </div>
+            </a>
+            <a href="https://x.com/TMIYChao" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
+              <div>
+                <img src="./img/speakers-2026/mario-havel.jpg" alt="speaker" class="aspect-square object-cover w-full">
+              </div>
+              <div class="pb-4 px-4">
+                <div class="mt-4 speaker-name">MARIO HAVEL</div>
+                <div class="mt-1 text-sm text-mild">Ethereum Foundation</div>
+                <div class="mt-1 text-sm text-mild">@TMIYChao</div>
+              </div>
+            </a>
+            <a href="https://x.com/SoosMate" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
+              <div>
+                <img src="./img/speakers-2026/mate-soos.jpg" alt="speaker" class="aspect-square object-cover w-full">
+              </div>
+              <div class="pb-4 px-4">
+                <div class="mt-4 speaker-name">MATE SOOS</div>
+                <div class="mt-1 text-sm text-mild">Argot Collective</div>
+                <div class="mt-1 text-sm text-mild">@SoosMate</div>
+              </div>
+            </a>
+            <a href="https://x.com/Kate_stapes" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
+              <div>
+                <img src="./img/speakers-2026/kate-stapleton.png" alt="speaker" class="aspect-square object-cover w-full">
+              </div>
+              <div class="pb-4 px-4">
+                <div class="mt-4 speaker-name">KATE STAPLETON</div>
+                <div class="mt-1 text-sm text-mild">Fhenix</div>
+                <div class="mt-1 text-sm text-mild">@Kate_stapes</div>
+              </div>
+            </a>
+            <a href="https://x.com/DrNickA" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
+              <div>
+                <img src="./img/speakers-2026/nick-almond.jpg" alt="speaker" class="aspect-square object-cover w-full">
+              </div>
+              <div class="pb-4 px-4">
+                <div class="mt-4 speaker-name">NICK ALMOND</div>
+                <div class="mt-1 text-sm text-mild">Jito</div>
+                <div class="mt-1 text-sm text-mild">@DrNickA</div>
+              </div>
+            </a>
+            <a href="https://x.com/TBSocialist" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
+              <div>
+                <img src="./img/speakers-2026/josh-davila.png" alt="speaker" class="aspect-square object-cover w-full">
+              </div>
+              <div class="pb-4 px-4">
+                <div class="mt-4 speaker-name">JOSH DÁVILA</div>
+                <div class="mt-1 text-sm text-mild">Bread Coop</div>
+                <div class="mt-1 text-sm text-mild">@TBSocialist</div>
+              </div>
+            </a>
+            <a href="https://x.com/callebtc" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
+              <div>
+                <img src="./img/speakers-2026/calle.jpg" alt="speaker" class="aspect-square object-cover w-full">
+              </div>
+              <div class="pb-4 px-4">
+                <div class="mt-4 speaker-name">CALLE</div>
+                <div class="mt-1 text-sm text-mild">Bitchat, Cashu</div>
+                <div class="mt-1 text-sm text-mild">@callebtc</div>
+              </div>
+            </a>
+            <a href="https://x.com/AdamPeterBurns" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
+              <div>
+                <img src="./img/adam-burns.png" alt="speaker" class="aspect-square object-cover w-full">
+              </div>
+              <div class="pb-4 px-4">
+                <div class="mt-4 speaker-name">ADAM BURNS</div>
+                <div class="mt-1 text-sm text-mild">free2air, Dyne</div>
+                <div class="mt-1 text-sm text-mild">@AdamPeterBurns</div>
+              </div>
+            </a>
+            <a href="https://x.com/ariskomporozos" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
+              <div>
+                <img src="./img/speakers-2026/athanasiou.png" alt="speaker" class="aspect-square object-cover w-full">
+              </div>
+              <div class="pb-4 px-4">
+                <div class="mt-4 speaker-name">ARIS KOMPOROZOS-ATHANASIOU</div>
+                <div class="mt-1 text-sm text-mild">UCL Centre for Capitalism Studies</div>
+                <div class="mt-1 text-sm text-mild">@ariskomporozos</div>
+              </div>
+            </a>
+            <div class="hover:bg-white hover:text-black person-item border border-white/30">
+              <div>
+                <img src="./img/speakers-2026/daniel-calderon.jpg" alt="speaker" class="aspect-square object-cover w-full">
+              </div>
+              <div class="pb-4 px-4">
+                <div class="mt-4 speaker-name">DANIEL CALDERON</div>
+                <div class="mt-1 text-sm text-mild">Zalando SE</div>
+              </div>
+            </div>
+            <div class="person-item border border-white/30">
+              <div>
+                <img src="./img/speakers-2026/anonymous.png" alt="More speakers coming soon" class="aspect-square object-cover w-full">
+              </div>
+              <div class="pb-4 px-4">
+                <div class="mt-4 speaker-name" style="color: rgba(255,255,255,0.4);">MORE SPEAKERS<br>ANNOUNCED SOON</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Donors -->
+      <div class="text-white px-4" style="margin-top: var(--section-gap);">
+        <div class="text-center" style="margin-bottom: var(--section-title-gap);">
+          <div class="testimonials-title">Donors</div>
+          <div class="display-md text-mild mt-4">We are grateful for your generous support of Web3Privacy Now</div>
+        </div>
+        <div class="grid gap-4 grid-cols-2 md:grid-cols-3 lg:grid-cols-3 mx-auto" style="max-width: 840px;">
+          <a href="https://www.protocol.ai/" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
+            <div class="p-4">
+              <img src="./img/sponsors-2026/protocol-labs.png" alt="Protocol Labs" class="aspect-[16/11] w-full h-full object-contain">
+            </div>
+            <div class="pb-4 px-4">
+              <div class="mt-4 speaker-name">PROTOCOL LABS</div>
+              <div class="mt-1 text-sm text-mild">@protocollabs</div>
+            </div>
+          </a>
+          <a href="https://www.ethswarm.org/" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
+            <div class="p-4">
+              <img src="./img/sponsors-2026/swarm.png" alt="Swarm" class="aspect-[16/11] w-full h-full object-contain">
+            </div>
+            <div class="pb-4 px-4">
+              <div class="mt-4 speaker-name">SWARM</div>
+              <div class="mt-1 text-sm text-mild">@ethswarm</div>
+            </div>
+          </a>
+          <a href="https://logos.co/" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
+            <div class="p-4">
+              <img src="./img/sponsors-2026/logos.png" alt="Logos" class="aspect-[16/11] w-full h-full object-contain">
+            </div>
+            <div class="pb-4 px-4">
+              <div class="mt-4 speaker-name">LOGOS</div>
+              <div class="mt-1 text-sm text-mild">@Logos_network</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Partners -->
+      <div class="text-white px-4" style="margin-top: var(--section-gap);">
+        <div class="text-center" style="margin-bottom: var(--section-title-gap);">
+          <div class="testimonials-title">Partners</div>
+          <div class="display-md text-mild mt-4">Thank you for your trust, care and collaboration</div>
+        </div>
+        <div class="grid gap-4 grid-cols-2 md:grid-cols-4 lg:grid-cols-4 mx-auto" style="max-width: 1100px;">
+          <a href="https://ethereum.foundation/" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
+            <div class="p-4">
+              <img src="./img/sponsors-2026/eth.png" alt="Ethereum Foundation" class="aspect-[16/11] w-full h-full object-contain">
+            </div>
+            <div class="pb-4 px-4">
+              <div class="mt-4 speaker-name">ETHEREUM FOUNDATION</div>
+              <div class="mt-1 text-sm text-mild">@ethereumfndn</div>
+            </div>
+          </a>
+          <a href="https://dyne.org/" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
+            <div class="p-4">
+              <img src="./img/sponsors-2026/dyne.png" alt="Dyne.org" class="aspect-[16/11] w-full h-full object-contain">
+            </div>
+            <div class="pb-4 px-4">
+              <div class="mt-4 speaker-name">DYNE.ORG</div>
+              <div class="mt-1 text-sm text-mild">@DaboraOrg</div>
+            </div>
+          </a>
+          <a href="https://consensys.io/diligence" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
+            <div class="p-4">
+              <img src="./img/consensys-diligence.webp" alt="Consensys Diligence" class="aspect-[16/11] w-full h-full object-contain">
+            </div>
+            <div class="pb-4 px-4">
+              <div class="mt-4 speaker-name">CONSENSYS DILIGENCE</div>
+              <div class="mt-1 text-sm text-mild">@ConsenSysAudits</div>
+            </div>
+          </a>
+          <a href="https://brave.com/" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
+            <div class="p-4">
+              <img src="./img/brave.png" alt="Brave" class="aspect-[16/11] w-full h-full object-contain">
+            </div>
+            <div class="pb-4 px-4">
+              <div class="mt-4 speaker-name">BRAVE</div>
+              <div class="mt-1 text-sm text-mild">@brave</div>
+            </div>
+          </a>
+          <a href="https://www.torproject.org/" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
+            <div class="p-4">
+              <img src="./img/tor.jpg" alt="Tor Project" class="aspect-[16/11] w-full h-full object-contain">
+            </div>
+            <div class="pb-4 px-4">
+              <div class="mt-4 speaker-name">TOR PROJECT</div>
+              <div class="mt-1 text-sm text-mild">@torproject</div>
+            </div>
+          </a>
+          <a href="https://www.gnosis.io/" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
+            <div class="p-4">
+              <img src="./img/sponsors-2026/gnosis.png" alt="Gnosis" class="aspect-[16/11] w-full h-full object-contain">
+            </div>
+            <div class="pb-4 px-4">
+              <div class="mt-4 speaker-name">GNOSIS</div>
+              <div class="mt-1 text-sm text-mild">@GnosisDAO</div>
+            </div>
+          </a>
+          <a href="https://www.funkhaus-berlin.net/" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
+            <div class="p-4">
+              <img src="./img/sponsors-2026/funkhaus.png" alt="Funkhaus Berlin" class="aspect-[16/11] w-full h-full object-contain">
+            </div>
+            <div class="pb-4 px-4">
+              <div class="mt-4 speaker-name">FUNKHAUS</div>
+              <div class="mt-1 text-sm text-mild">@funkaborlin</div>
+            </div>
+          </a>
+          <a href="https://zuberlin.com/" target="_blank" class="hover:bg-white hover:text-black person-item border border-white/30">
+            <div class="p-4">
+              <img src="./img/zuberlin.png" alt="ZuBerlin" class="aspect-[16/11] w-full h-full object-contain">
+            </div>
+            <div class="pb-4 px-4">
+              <div class="mt-4 speaker-name">ZUBERLIN</div>
+              <div class="mt-1 text-sm text-mild">@ZuBerlin</div>
+            </div>
+          </a>
         </div>
       </div>
 

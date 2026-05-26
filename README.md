@@ -1,6 +1,6 @@
 # s26ber
 
-Public repository of the code for the 2026 Web3Privacy Now Neo-Cypherpunk Summit held in Berlin -  built with simple web-standard HTML and CSS
+Public repository of the code for the 2026 Web3Privacy Now Neo-Cypherpunk Summit in Berlin -  built with simple web-standard HTML and CSS
 
 ## CONTENTS
 

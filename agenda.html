@@ -11,20 +11,23 @@
     <meta http-equiv="content-security-policy" content="script-src 'self' 'unsafe-inline'; connect-src 'self' https://talx.dod.ngo; img-src 'self' data: https://talx.dod.ngo; form-action 'self';">
     <link href="./w3pevent.css?v=4" rel="stylesheet">
     <style>
-      /* Scoped styling for the self-rendered agenda */
-      #agenda-root .agenda-day-title { font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 1rem; text-align: center; }
-      #agenda-root .agenda-slot { display: flex; gap: 1rem; padding: 1rem 1.25rem; margin: 0.6rem 0; border: 1px solid rgba(255,255,255,0.15); border-radius: 0.75rem; background: rgba(255,255,255,0.03); transition: background 0.15s ease, border-color 0.15s ease; }
-      #agenda-root a.agenda-slot { text-decoration: none; color: inherit; }
-      #agenda-root a.agenda-slot:hover { background: rgba(255,255,255,0.07); border-color: rgba(255,255,255,0.35); }
-      #agenda-root .agenda-time { flex: 0 0 5.5rem; font-variant-numeric: tabular-nums; }
-      #agenda-root .agenda-time .start { display: block; font-size: 1.1rem; font-weight: 700; }
-      #agenda-root .agenda-time .dur { display: block; font-size: 0.8rem; opacity: 0.6; }
-      #agenda-root .agenda-body { flex: 1 1 auto; min-width: 0; }
-      #agenda-root .agenda-title { font-size: 1.05rem; font-weight: 600; margin: 0 0 0.25rem; }
-      #agenda-root .agenda-meta { font-size: 0.85rem; opacity: 0.7; display: flex; flex-wrap: wrap; gap: 0.5rem 0.9rem; }
-      #agenda-root .agenda-room { display: inline-block; padding: 0.05rem 0.55rem; border: 1px solid rgba(255,255,255,0.25); border-radius: 999px; font-size: 0.78rem; }
-      #agenda-root .agenda-speakers { font-style: italic; }
-      @media (max-width: 640px) { #agenda-root .agenda-slot { flex-direction: column; gap: 0.35rem; } #agenda-root .agenda-time { flex-basis: auto; } }
+      /* Scoped styling for the self-rendered agenda (room-column timeline) */
+      #agenda-root .agenda-day-title { font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 1.25rem; text-align: center; }
+      #agenda-root .agenda-scroll { overflow-x: auto; padding-bottom: 0.5rem; }
+      #agenda-root .agenda-grid { display: flex; min-width: max-content; }
+      #agenda-root .agenda-col { flex: 1 1 0; }
+      #agenda-root .agenda-gutter { flex: 0 0 3.5rem; }
+      #agenda-root .agenda-room-col { min-width: 220px; }
+      #agenda-root .agenda-col-head { height: 2.5rem; display: flex; align-items: center; justify-content: center; font-weight: 700; position: sticky; top: 0; }
+      #agenda-root .agenda-track { position: relative; border-left: 1px solid rgba(255,255,255,0.10); }
+      #agenda-root .agenda-gutter .agenda-track { border-left: none; }
+      #agenda-root .agenda-hour { position: absolute; left: 0; right: 0; border-top: 1px solid rgba(255,255,255,0.08); }
+      #agenda-root .agenda-hour-label { position: absolute; right: 0.4rem; transform: translateY(-0.6rem); font-size: 0.78rem; opacity: 0.55; font-variant-numeric: tabular-nums; }
+      #agenda-root .agenda-block { position: absolute; overflow: hidden; padding: 0.3rem 0.55rem; border: 1px solid rgba(255,255,255,0.18); border-radius: 0.6rem; background: rgba(124, 95, 196, 0.18); color: inherit; text-decoration: none; transition: background 0.15s ease, border-color 0.15s ease; }
+      #agenda-root a.agenda-block:hover { background: rgba(124, 95, 196, 0.35); border-color: rgba(255,255,255,0.45); z-index: 5; }
+      #agenda-root .agenda-block .b-title { font-size: 0.9rem; font-weight: 600; line-height: 1.2; margin: 0 0 0.12rem; }
+      #agenda-root .agenda-block .b-time { display: block; font-size: 0.72rem; opacity: 0.65; font-variant-numeric: tabular-nums; }
+      #agenda-root .agenda-block .b-spk { display: block; font-size: 0.76rem; opacity: 0.7; font-style: italic; margin-top: 0.1rem; }
     </style>
     <title>Agenda | Neocypherpunk Summit 2026</title>
     <meta name="description" content="Agenda - Neocypherpunk Summit 2026">
@@ -217,52 +220,112 @@
         }
       }
 
+      var PX_PER_MIN = 3.6; // vertical scale of the timeline (keeps short sessions readable)
+
       fetch(feed, { mode: 'cors' })
         .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
         .then(function (data) {
-          var talks = (data.talks || []).slice().filter(function (t) { return t.start; });
+          var talks = (data.talks || []).slice().filter(function (t) { return t.start && t.end; });
           if (!talks.length) {
             status.textContent = 'The agenda has not been published yet. Please check back soon.';
             return;
           }
           var tz = data.timezone || 'Europe/Berlin';
 
-          var rooms = {};
-          (data.rooms || []).forEach(function (rm) { rooms[rm.id] = localize(rm.name); });
+          var roomName = {};
+          (data.rooms || []).forEach(function (rm) { roomName[rm.id] = localize(rm.name); });
           var speakers = {};
           (data.speakers || []).forEach(function (sp) { speakers[sp.code] = sp.name; });
 
-          talks.sort(function (a, b) {
-            return a.start < b.start ? -1 : a.start > b.start ? 1 : (rooms[a.room] || '').localeCompare(rooms[b.room] || '');
-          });
+          // Preserve declared room order, but only keep rooms that have sessions.
+          var roomOrder = (data.rooms || []).map(function (rm) { return rm.id; })
+            .filter(function (id) { return talks.some(function (t) { return t.room === id; }); });
+          if (!roomOrder.length) roomOrder = [null];
 
-          var days = {};
-          var order = [];
+          // Group talks by day.
+          var days = {}, dayOrder = [];
           talks.forEach(function (t) {
             var k = dayKey(t.start, tz);
-            if (!days[k]) { days[k] = []; order.push(k); }
+            if (!days[k]) { days[k] = []; dayOrder.push(k); }
             days[k].push(t);
           });
 
           var html = '';
-          order.forEach(function (k) {
-            html += '<h2 class="agenda-day-title">' + esc(k) + '</h2>';
-            days[k].forEach(function (t) {
-              var names = (t.speakers || []).map(function (c) { return speakers[c] || c; }).filter(Boolean).join(', ');
-              var room = rooms[t.room];
-              var href = base + '/talk/' + encodeURIComponent(t.code) + '/';
-              html += '<a class="agenda-slot" href="' + esc(href) + '" target="_blank" rel="noopener">' +
-                '<div class="agenda-time"><span class="start">' + esc(fmtTime(t.start, tz)) + '</span>' +
-                (t.duration ? '<span class="dur">' + esc(t.duration) + ' min</span>' : '') + '</div>' +
-                '<div class="agenda-body">' +
-                  '<p class="agenda-title">' + esc(t.title) + '</p>' +
-                  '<div class="agenda-meta">' +
-                    (room ? '<span class="agenda-room">' + esc(room) + '</span>' : '') +
-                    (names ? '<span class="agenda-speakers">' + esc(names) + '</span>' : '') +
-                  '</div>' +
-                '</div>' +
-              '</a>';
+          dayOrder.forEach(function (k) {
+            var dayTalks = days[k];
+            var startMs = Math.min.apply(null, dayTalks.map(function (t) { return +new Date(t.start); }));
+            var endMs = Math.max.apply(null, dayTalks.map(function (t) { return +new Date(t.end); }));
+            var dayStart = new Date(Math.floor(startMs / 3600000) * 3600000); // floor to the hour
+            var totalMin = Math.ceil((endMs - +dayStart) / 60000);
+            var gridH = totalMin * PX_PER_MIN;
+
+            function topOf(iso) { return ((+new Date(iso)) - (+dayStart)) / 60000 * PX_PER_MIN; }
+
+            // Hour gridlines + gutter labels.
+            var lines = '', labels = '';
+            for (var m = 0; m <= totalMin; m += 60) {
+              var y = m * PX_PER_MIN;
+              lines += '<div class="agenda-hour" style="top:' + y + 'px"></div>';
+              var hr = new Date(+dayStart + m * 60000);
+              labels += '<div class="agenda-hour-label" style="top:' + y + 'px">' + esc(fmtTime(hr.toISOString(), tz)) + '</div>';
+            }
+
+            // Within a room, split overlapping sessions into side-by-side sub-columns.
+            function layout(items) {
+              items.sort(function (a, b) { return a.start < b.start ? -1 : a.start > b.start ? 1 : 0; });
+              var cluster = [], clusterEnd = -1;
+              function place(cl) {
+                var colEnds = [];
+                cl.forEach(function (it) {
+                  var s = +new Date(it.start), e = +new Date(it.end), ci = -1;
+                  for (var i = 0; i < colEnds.length; i++) { if (s >= colEnds[i]) { ci = i; break; } }
+                  if (ci < 0) ci = colEnds.length;
+                  colEnds[ci] = e; it._col = ci;
+                });
+                cl.forEach(function (it) { it._cols = colEnds.length; });
+              }
+              items.forEach(function (it) {
+                var s = +new Date(it.start);
+                if (cluster.length && s >= clusterEnd) { place(cluster); cluster = []; clusterEnd = -1; }
+                cluster.push(it);
+                clusterEnd = Math.max(clusterEnd, +new Date(it.end));
+              });
+              if (cluster.length) place(cluster);
+              return items;
+            }
+
+            // Room columns.
+            var cols = '';
+            roomOrder.forEach(function (rid) {
+              var blocks = '';
+              layout(dayTalks.filter(function (t) { return t.room === rid; })).forEach(function (t) {
+                var top = topOf(t.start);
+                var h = Math.max(((+new Date(t.end)) - (+new Date(t.start))) / 60000 * PX_PER_MIN - 3, 18);
+                var w = 100 / (t._cols || 1);
+                var leftCss = 'calc(' + (t._col || 0) * w + '% + 4px)';
+                var widthCss = 'calc(' + w + '% - 8px)';
+                var names = (t.speakers || []).map(function (c) { return speakers[c] || c; }).filter(Boolean).join(', ');
+                var href = base + '/talk/' + encodeURIComponent(t.code) + '/';
+                blocks += '<a class="agenda-block" style="top:' + top + 'px;height:' + h + 'px;left:' + leftCss + ';width:' + widthCss + '" ' +
+                  'href="' + esc(href) + '" target="_blank" rel="noopener" title="' + esc(t.title) + '">' +
+                  '<p class="b-title">' + esc(t.title) + '</p>' +
+                  '<span class="b-time">' + esc(fmtTime(t.start, tz)) + '–' + esc(fmtTime(t.end, tz)) + '</span>' +
+                  (names ? '<span class="b-spk">' + esc(names) + '</span>' : '') +
+                  '</a>';
+              });
+              cols += '<div class="agenda-col agenda-room-col">' +
+                '<div class="agenda-col-head">' + esc(rid == null ? '' : (roomName[rid] || '')) + '</div>' +
+                '<div class="agenda-track" style="height:' + gridH + 'px">' + lines + blocks + '</div>' +
+              '</div>';
             });
+
+            html += '<h2 class="agenda-day-title">' + esc(k) + '</h2>' +
+              '<div class="agenda-scroll"><div class="agenda-grid">' +
+                '<div class="agenda-col agenda-gutter">' +
+                  '<div class="agenda-col-head"></div>' +
+                  '<div class="agenda-track" style="height:' + gridH + 'px">' + labels + '</div>' +
+                '</div>' + cols +
+              '</div></div>';
           });
           root.innerHTML = html;
         })

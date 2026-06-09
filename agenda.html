@@ -28,6 +28,17 @@
       #agenda-root .agenda-block .b-title { font-size: 0.9rem; font-weight: 600; line-height: 1.2; margin: 0 0 0.12rem; }
       #agenda-root .agenda-block .b-time { display: block; font-size: 0.72rem; opacity: 0.65; font-variant-numeric: tabular-nums; }
       #agenda-root .agenda-block .b-spk { display: block; font-size: 0.76rem; opacity: 0.7; font-style: italic; margin-top: 0.1rem; }
+      /* Mobile room toggle — hidden on desktop, where all columns show side by side */
+      #agenda-root .agenda-room-toggle { display: none; gap: 0.5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 1.25rem; }
+      #agenda-root .agenda-room-tab { padding: 0.4rem 1.1rem; border: 1px solid rgba(255,255,255,0.25); border-radius: 999px; background: transparent; color: inherit; cursor: pointer; font: inherit; font-size: 0.9rem; }
+      #agenda-root .agenda-room-tab.active { background: rgba(124, 95, 196, 0.4); border-color: rgba(255,255,255,0.5); }
+      @media (max-width: 640px) {
+        #agenda-root .agenda-room-toggle { display: flex; }
+        #agenda-root .agenda-grid { min-width: 0; }
+        #agenda-root .agenda-room-col { min-width: 0; }
+        #agenda-root .agenda-room-col:not(.active) { display: none; }
+        #agenda-root .agenda-room-col .agenda-col-head { display: none; }
+      }
     </style>
     <title>Agenda | Neocypherpunk Summit 2026</title>
     <meta name="description" content="Agenda - Neocypherpunk Summit 2026">
@@ -295,8 +306,10 @@
             }
 
             // Room columns.
-            var cols = '';
-            roomOrder.forEach(function (rid) {
+            var cols = '', tabs = '';
+            roomOrder.forEach(function (rid, ri) {
+              tabs += '<button type="button" class="agenda-room-tab' + (ri === 0 ? ' active' : '') + '" data-idx="' + ri + '">' +
+                esc(rid == null ? 'Room' : (roomName[rid] || 'Room')) + '</button>';
               var blocks = '';
               layout(dayTalks.filter(function (t) { return t.room === rid; })).forEach(function (t) {
                 var top = topOf(t.start);
@@ -313,21 +326,37 @@
                   (names ? '<span class="b-spk">' + esc(names) + '</span>' : '') +
                   '</a>';
               });
-              cols += '<div class="agenda-col agenda-room-col">' +
+              cols += '<div class="agenda-col agenda-room-col' + (ri === 0 ? ' active' : '') + '" data-idx="' + ri + '">' +
                 '<div class="agenda-col-head">' + esc(rid == null ? '' : (roomName[rid] || '')) + '</div>' +
                 '<div class="agenda-track" style="height:' + gridH + 'px">' + lines + blocks + '</div>' +
               '</div>';
             });
 
-            html += '<h2 class="agenda-day-title">' + esc(k) + '</h2>' +
+            html += '<div class="agenda-day">' +
+              '<h2 class="agenda-day-title">' + esc(k) + '</h2>' +
+              '<div class="agenda-room-toggle">' + tabs + '</div>' +
               '<div class="agenda-scroll"><div class="agenda-grid">' +
                 '<div class="agenda-col agenda-gutter">' +
                   '<div class="agenda-col-head"></div>' +
                   '<div class="agenda-track" style="height:' + gridH + 'px">' + labels + '</div>' +
                 '</div>' + cols +
-              '</div></div>';
+              '</div></div>' +
+            '</div>';
           });
           root.innerHTML = html;
+
+          // Mobile room toggle: switch which room column is visible (per day).
+          root.querySelectorAll('.agenda-day').forEach(function (day) {
+            var tabEls = day.querySelectorAll('.agenda-room-tab');
+            var colEls = day.querySelectorAll('.agenda-room-col');
+            tabEls.forEach(function (tab) {
+              tab.addEventListener('click', function () {
+                var idx = tab.getAttribute('data-idx');
+                tabEls.forEach(function (t) { t.classList.toggle('active', t === tab); });
+                colEls.forEach(function (c) { c.classList.toggle('active', c.getAttribute('data-idx') === idx); });
+              });
+            });
+          });
         })
         .catch(function (err) {
           status.innerHTML = 'Could not load the agenda. ' +
